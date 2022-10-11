@@ -15,10 +15,10 @@ font-size: 63pt;
 font-weight: bolder;
 color: white;
 text-align:center;
-
+font-family: "Graphik"
 `;
 
-const Logistics = () => {
+const Footer = () => {
   console.log(":asd")
   return (
     <FooterContainer>
@@ -33,4 +33,4 @@ const Logistics = () => {
   );
 };
 
-export default Logistics;
+export default Footer;
