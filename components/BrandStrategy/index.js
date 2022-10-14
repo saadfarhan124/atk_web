@@ -17,23 +17,19 @@ const Description = styled.p`
   color: white;
   text-align: right;
   width: 30%;
+  position: absolute;
+  right: 100px;
+  top:250px
 `;
 const Container = styled.div`
   position: relative;
 `;
 const ContainerTxt = styled.div`
   position: relative;
-
-  margin-left: 30%;
-`;
-const Img = styled.img`
-  position: absolute;
-  top: 0px !important;
-  left: 100px !important;
 `;
 const Imgs = styled.img`
   position: absolute;
-  top: 0px !important;
+  top: 50px !important;
   right: 100px !important;
 `;
 const BrandStrategy = () => {
@@ -44,7 +40,6 @@ const BrandStrategy = () => {
       <Container className="pSection">
         <ContainerTxt
           className="pContent"
-          style={{ marginLeft: 0, marginRight: "30%" }}
         >
           <Title>
             Brand
@@ -52,6 +47,7 @@ const BrandStrategy = () => {
             <br /> Process
           </Title>
         </ContainerTxt>
+
         <Imgs
           className="pImage"
           src="/static/brand.png"
@@ -63,6 +59,7 @@ const BrandStrategy = () => {
           Choose an agency where you can work better, smarter, and stronger with
           a 7-step tailored journey that works for you.
         </Description>
+       
       </Container>
     </div>
   );
