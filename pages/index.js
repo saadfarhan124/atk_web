@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import Agency from "../components/Agency";
 import GlobalBrand from "../components/GlobalBrand";
 import BrandStrategy from "../components/BrandStrategy";
+import Brand from '../components/Brand';
+import Overview from "../components/Overview";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -14,7 +16,10 @@ export default function Home() {
       <Sliderr />
       <GlobalBrand />
       <BrandStrategy />
+      <Brand/>
+      <Overview/>
       <Agency />
+      
       <Footer />
     </div>
   );

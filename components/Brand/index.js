@@ -135,6 +135,7 @@ const Brand = () => {
               }}
             >
               <SwiperSlide>
+                sec 1
                 {/* <div style={{display:'flex',flexDirection:'row',height:'100%'}}>
                     <div style={{flex:1,border:'0px solid green',}}>
                         <LeftBox>
@@ -161,6 +162,7 @@ const Brand = () => {
                 </div> */}
               </SwiperSlide>
               <SwiperSlide>
+              sec 2
                   {/* <div
                   style={{
                     border: "0px solid blue",
@@ -196,6 +198,8 @@ const Brand = () => {
                  */}
                 </SwiperSlide>
               <SwiperSlide>
+              sec 3
+
                   {/* <div
                   style={{
                     border: "0px solid blue",
@@ -230,6 +234,7 @@ const Brand = () => {
                 </div> */}
                 </SwiperSlide>
               <SwiperSlide>
+              sec 4
                   {/* <div
                   style={{
                     border: "0px solid blue",
