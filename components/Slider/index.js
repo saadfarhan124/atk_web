@@ -23,13 +23,13 @@ const Slide = styled.div`
   background-image: url("static/createbg.jpeg");
  
   background-size:cover;
-  background-position-y: 0.00rem;  border0px solid red;
+  background-position-y: 0.00rem; 
 
 
 `;
 const Type = styled.div`
   height:80vh;
-  width: 100vw;
+  width: 96vw;
   background-size: auto 80vh;
   background-repeat: repeat-x;
   animation-name: ${Marquee};
