@@ -17,21 +17,21 @@ a {
 
 @font-face {
   font-family: "Gotham";
-  src: url('../fonts/gotham/Gotham-Black-Regular.ttf');
+  src: url("../fonts/gotham/Gotham-Black-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
-  
+
 @font-face {
   font-family: "Graphik";
-  src: url('../fonts/graphik/GraphikMedium.otf');
+  src: url("../fonts/graphik/GraphikMedium.otf");
   font-weight: normal;
   font-style: normal;
 }
-  
+
 @font-face {
   font-family: "GraphikItalic";
-  src: url('../fonts/graphik/GraphikMediumItalic.otf');
+  src: url("../fonts/graphik/GraphikMediumItalic.otf");
   font-weight: normal;
   font-style: italic;
 }
@@ -45,7 +45,6 @@ a {
     background: black;
   }
 }
-
 
 body,
 html {
@@ -97,7 +96,6 @@ html {
   background-color: #00026d;
 }
 
-
 .text-wrap {
   position: relative;
   overflow: hidden;
@@ -117,16 +115,16 @@ html {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 900;
-  text-align:center;
+  text-align: center;
   background-color: #070707;
-  
-  transform:translateY(100%);
+
+  transform: translateY(100%);
   opacity: 0;
 }
 
 .panel-text.blue-text {
   color: red;
-  border:1px solid white;
+  border: 1px solid white;
 }
 
 .panel-text.red-text {
@@ -140,11 +138,6 @@ html {
 .panel-text.orange-text {
   color: orange;
 }
-
-
-
-
-
 
 .p-wrap {
   position: relative;
@@ -193,4 +186,52 @@ html {
   z-index: auto;
   background-color: #808;
   background-image: none;
+}
+
+.helper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 150px;
+  height: 100vh;
+  background-color: orange;
+}
+.containerw {
+  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 50px;
+  height: 100vh;
+  background-color: black;
+}
+.text1 {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: "center";
+  height: "100vh";
+}
+.mySwiper {
+  margin-top: 10%;
+  height: 100vh !important;
+  width: 100%;
+  background-color: transparent !important;
+  position: absolute !important;
+}
+.slides {
+  height: 40vh !important;
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8rem;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  text-align: center; /* Animation */
 }
