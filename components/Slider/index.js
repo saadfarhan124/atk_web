@@ -4,7 +4,7 @@ import { keyframes } from "styled-components";
 
 const Parent = styled.div`
   width: 100%;
-  background-color: white;
+  background-color: black;
   position: relative;
   height:80vh;
 `;
@@ -23,7 +23,8 @@ const Slide = styled.div`
   background-image: url("static/createbg.jpeg");
  
   background-size:cover;
-  background-position-y: 0.00rem;
+  background-position-y: 0.00rem;  border0px solid red;
+
 
 `;
 const Type = styled.div`

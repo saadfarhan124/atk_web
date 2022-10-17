@@ -1,7 +1,10 @@
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import React, { useRef, useLayoutEffect } from "react";
+import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
+import ParallaxItem from "../Paralex";
 const Title = styled.p`
   font-family: "Graphik";
   font-size: 57pt;
@@ -19,38 +22,43 @@ const Description = styled.p`
 `;
 const Container = styled.div`
   position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const ContainerTxt = styled.div`
-  position: relative;
-
-margin-left: 30%;
+  margin-left: 30%;
 `;
-const Img = styled.img`
+const ImgParallax = styled(Parallax)`
   position: absolute;
-  top: 0px !important;
+  top: 150px !important;
   left: 100px !important;
 `;
+const Img = styled.img``;
 const Agency = () => {
-  const ag = useRef();
-
   return (
-    <div ref={ag}>
+    <div>
       <Container className="pSection">
         <ContainerTxt className="pContent">
-          <Title>WHY AGENCY TK?</Title>
-          <Description>
-            Innovation isn’t just a buzzword for us. We put our money where our
-            mouth is, from creating world-first app technology to bringing a
-            brand new beverage concept to the market. We push, challenge, and
-            change things for the better.
-          </Description>
+          <Parallax speed={10}>
+            <Title>WHY AGENCY TK?</Title>
+            <Description>
+              Innovation isn’t just a buzzword for us. We put our money where
+              our mouth is, from creating world-first app technology to bringing
+              a brand new beverage concept to the market. We push, challenge,
+              and change things for the better.
+            </Description>
+          </Parallax>
         </ContainerTxt>
-        <Img
-          className="pImage"
-          src="/static/why_agency.png"
-          width="305px"
-          height="380px"
-        />
+        <ImgParallax speed={-10}>
+          <Img
+            className="pImage"
+            src="/static/why_agency.png"
+            width="305px"
+            height="380px"
+          />
+        </ImgParallax>
       </Container>
     </div>
   );

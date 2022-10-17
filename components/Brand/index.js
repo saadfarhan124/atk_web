@@ -67,7 +67,7 @@ const Swipertext = styled.div`
   -webkit-animation: ${Marquee} 5s linear infinite;
   animation: ${Marquee} 5s linear infinite;
   text-transform: uppercase;
-  font-size: 140px;
+  font-size: 110px;
 `;
 const RightHead = styled.div`
   font-size: 35pt;
