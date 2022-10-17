@@ -6,7 +6,7 @@ const Parent = styled.div`
   width: 100%;
   background-color: white;
   position: relative;
-  height:45vh;
+  height:80vh;
 `;
 const Marquee = keyframes`
 0% {
@@ -20,16 +20,16 @@ const Slide = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("static/createbg.png");
+  background-image: url("static/createbg.jpeg");
  
   background-size:cover;
   background-position-y: 0.00rem;
 
 `;
 const Type = styled.div`
-  height: 45vh;
+  height:80vh;
   width: 100vw;
-  background-size: auto 60vh;
+  background-size: auto 80vh;
   background-repeat: repeat-x;
   animation-name: ${Marquee};
   animation: ${Marquee} 480s linear infinite;

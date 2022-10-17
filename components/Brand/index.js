@@ -102,12 +102,7 @@ height:100%;
 justify-content:flex-start;
 
 `;
-const RightBox = styled.div`
-flex:5,
-border:1px solid grey;
-display:flex;
-align-items:center;
-`;
+
 const Brand = () => {
   return (
     <>
