@@ -62,6 +62,9 @@ const ImgContainer = styled.div`
 `;
 const ContainerTxt = styled.div`
   position: relative;
+  margin-left: 5%;
+  /* padding-left: 25%;
+  padding-right: 10%; */
 `;
 const Imgs = styled.img``;
 const BrandStrategy = () => {

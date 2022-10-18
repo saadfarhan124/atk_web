@@ -34,6 +34,7 @@ const Description = styled.p`
   font-size: 42.8pt;
   font-weight: 400;
   text-align: right;
+  
   @media screen and (max-width: 1029px) {
     font-size: 3vw;
   }
@@ -64,7 +65,10 @@ const Container = styled.div`
 const ContainerTxt = styled.div`
   position: relative;
 
-  margin-left: 30%;
+  margin-left: 40%;
+  
+  /* padding-left: 25%;
+  padding-right: 10%; */
 `;
 const ImgsParallax = styled(Parallax)`
   position: absolute;
@@ -84,7 +88,7 @@ const GlobalBrand = () => {
       <Container className="pSection">
         <ContainerTxt
           className="pContent"
-          style={{ marginLeft: 0, marginRight: "30%" }}
+          style={{ marginLeft: "5%", marginRight: "30%" }}
         >
           <Parallax speed={10}>
             <Desc>
@@ -103,7 +107,7 @@ const GlobalBrand = () => {
         </ImgsParallax>
       </Container>
       <Container className="pSection">
-        <ContainerTxt className="pContent">
+        <ContainerTxt className="pContent" style={{marginRight:'0%'}}>
           <Parallax speed={-10}>
             <Description>
               We work with clients
