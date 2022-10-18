@@ -1,32 +1,36 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
-const FooterContainer = styled.div`
+const FooterContainer = styled(Parallax)`
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  background-color: black;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  flex-direction: column;
 `;
 const FooterText = styled.div`
-  width: 100%;
-  font-size: 63pt;
+  font-size: 6vw;
   font-weight: bolder;
   color: white;
-  text-align: center;
   font-family: "Graphik";
+  text-align: center;
+`;
+const FooterEmail = styled.a`
+  font-size: 6vw;
+  font-weight: bolder;
+  color: white;
+  font-family: "Graphik";
+  text-align: center;
 `;
 
 const Footer = () => {
-  console.log(":asd");
   return (
-    <Parallax speed={-5}>
-    <FooterContainer>
+    <FooterContainer speed={-5}>
       <FooterText>Get to know us better</FooterText>
-      <FooterText>gobeyond@agencytk.com</FooterText>
+      <FooterEmail href="mailto:gobeyond@agencytk.com">
+        gobeyond@agencytk.com
+      </FooterEmail>
     </FooterContainer>
-    </Parallax>
   );
 };
 

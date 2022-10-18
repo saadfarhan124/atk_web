@@ -1,23 +1,46 @@
-import gsap from "gsap";
-import Image from "next/image";
-import React, { useRef, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useRef, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+// https://www.geeksforgeeks.org/how-to-create-scroll-indicator-using-reactjs/
 const Title = styled.p`
   font-family: "Graphik";
   font-size: 47pt;
   font-weight: 500;
   color: white;
   text-align: right;
+  padding-top: 20px;
 `;
 const Description = styled.p`
   width: 40vw;
   font-family: "Graphik";
-  font-size: 25pt;
+  font-size: 2vw;
   font-weight: 400;
   color: white;
   padding-top: 3rem;
   text-align: right;
-  padding-right: 10rem;
+  padding-right: 8rem;
+  border: 0px solid red;
+  @media (max-width: 1236px) {
+    margin-right: 2px;
+    font-size: 1.5rem;
+    padding-right: 7rem;
+  }
+  @media (max-width: 1026px) {
+    margin-right: 2px;
+    font-size: 1.5rem;
+    padding-right: 4rem;
+  }
+  @media (max-width: 912px) {
+    width: 100%;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: 0px solid red;
+  }
+  @media (max-width: 862px) {
+  
+  }
 `;
 const Container = styled.div`
   position: relative;
@@ -34,88 +57,436 @@ const Img = styled.img`
   top: 0px !important;
   left: 2vw !important;
 `;
+
+const FlexCont = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding-left: "5rem";
+`;
+const RightText = styled.div`
+  padding-top: 2rem;
+  @media (max-width: 708px) {
+    margin-left: 2rem;
+  }
+`;
+
+const FlexRightDiv = styled.div`
+  flex: 2;
+  border: 0px solid blue;
+  text-align: right;
+  padding-right: 2rem;
+  @media (max-width: 860px) {
+    padding-left: 2rem;
+    flex: 1;
+  }
+  @media (max-width: 1190px) {
+    flex: 1;
+  }
+  
+  @media (max-width: 902px) {
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const FlexLeftDiv = styled.div`
+  flex: 2;
+  border: 0px solid green;
+  position: relative;
+  @media (max-width: 876px) {
+
+    flex: 1;
+  }
+  @media (max-width: 769px) {
+    flex: 1;
+  }
+  @media (max-width: 798px) {
+    flex: 1;
+  }
+`;
+const FlexCenter = styled.div`
+  flex: 3;
+  border: 0px solid yellow;
+
+  @media (max-width: 902px) {
+    flex: 4;
+    font-size: 2rem;
+  }
+  @media (max-width: 916px) {
+    flex: 4;
+ border: 0px solid red;
+  }
+  @media (max-width: 860px) {
+    flex: 4;
+  }
+`;
+
+
+                    
+
+const LeftTextPara=styled.p`
+padding-top: 6vw;
+transform: rotate(-90deg);
+                          font-size: 4vw;
+                          text-transform: uppercase;
+
+                          @media (max-width: 1162px) {
+                            padding-top: 15vw;
+                            font-size: 5vw;
+  }
+  @media (max-width: 912px) {
+                            padding-top: 10vw;
+                            font-size: 5vw;
+                            padding-right: 10vw;
+  }
+  @media (max-width: 974px) {
+                            padding-top: 10vw;
+                            font-size: 5vw;
+  }
+  @media (max-width: 768px) {
+                            /* padding-top: 15vw;
+                            padding-right: 10vw; */
+                            /* font-size: 5vw; */
+  }
+
+  
+`
 const Overview = () => {
+  const [scroll, setScroll] = useState(0);
+  console.log(scroll);
+  const onScroll = () => {
+    const Scrolled = document.documentElement.scrollTop;
+    const MaxHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const ScrollPercent = (Scrolled / MaxHeight) * 100;
+    setScroll(ScrollPercent);
+  };
+  if (typeof window !== "undefined") {
+    console.log("You are on the browser");
+    console.log(window.addEventListener("scroll", onScroll));
+    // ✅ Can use window here
+  }
+
   const ag = useRef();
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    console.log("gsap", ScrollTrigger);
+    let ctx = gsap.context(() => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".overview__section",
+          start: "+=500 center",
+          end: "+3500 center",
+          markers: false,
+          pin: true,
+          scrub: true,
+        },
+      });
+      tl.from(".vertical__text", {
+        opacity: 0,
+        duration: 0.1,
+        stagger: true,
+        y: 300,
+      })
+        .from(".pContent", {
+          opacity: 0,
+          duration: 0.2,
+          x: 300,
+        })
+        .from(".pImage", {
+          opacity: 0,
+          duration: 0.5,
+          y: -200,
+        });
+    }, ag);
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
 
   return (
-    <div ref={ag}>
-      <Title>
-        Overview <br /> of our <br /> Services
-      </Title>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          height: "40vh",
-          paddingLeft: "5rem",
-          paddingRight: "5rem",
-        }}
-      >
-        <div style={{ flex: 2, border: "0px solid green" }}>
-          <p style={{ transform: "rotate(-90deg)", fontSize: "50pt" }}>
-            Strategy
-          </p>
-        </div>
-        <div style={{ flex: 3, border: "0px solid yellow" }}>
-          <Container className="pSection">
-            <ContainerTxt className="pContent">
-              <Description>
-                Verbal brand identity - Brand <br />
-                audit - Naming - Positioning - <br />
-                Differentiation - Brand
-                <br />
-                architecture - Tone of voice - <br />
-                Consumer, market, and <br />
-                competitor research - Insights - <br />
-                Fieldwork - Focus groups <br />
-                Testing - Launch plans
-              </Description>
-            </ContainerTxt>
-            <Img
-              className="pImage"
-              src="/static/overview.png"
-              width="305px"
-              height="380px"
-            />
-          </Container>
-        </div>
-        <div
-          style={{
-            flex: 2,
-            border: "0px solid blue",
-            textAlign: "right",
-            paddingRight: "2rem",
-          }}
-        >
-          <p style={{ fontSize: "1.5rem" }}>hello</p>
-          <p style={{ fontSize: "1.5rem" }}>hi hello</p>
-          <p style={{ fontSize: "1.5rem" }}>whats up</p>
+    <>
+      <div ref={ag}>
+        <div className="section overview__section" style={{ height: "100vh" }}>
+          <Title>
+            Overview <br /> of our <br /> Services
+          </Title>
+          <FlexCont>
+            <FlexLeftDiv className="vertical__text">
+              {scroll > 63 && scroll < 71 ? (
+                <motion.p
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
+                  style={{ transform: "rotate(-90deg)" }}
+                >
+                  <LeftTextPara
+                  >
+                    Strategy
+                  </LeftTextPara>
+                </motion.p>
+              ) : (
+                <>
+                  {scroll > 72 && scroll < 79 ? (
+                    <motion.p
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                      }}
+                      style={{ transform: "rotate(-90deg)" }}
+                    >
+                      <LeftTextPara
+                      >
+                        Creative
+                      </LeftTextPara>
+                    </motion.p>
+                  ) : (
+                    <>
+                      {scroll > 80 && scroll < 87 ? (
+                        <motion.p
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20,
+                          }}
+                          style={{ transform: "rotate(-90deg)" }}
+                        >
+                          <LeftTextPara
+                          >
+                            campaign
+                          </LeftTextPara>
+                        </motion.p>
+                      ) : null}
+                    </>
+                  )}
+                </>
+              )}
+            </FlexLeftDiv>
+            <FlexCenter>
+              <Container className="pSection">
+                <ContainerTxt className="pContent">
+                  {scroll > 63 && scroll < 71 ? (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      duration={2}
+                    >
+                      <Description>
+                        1 Verbal brand identity - Brand <br />
+                        audit - Naming - Positioning - <br />
+                        Differentiation - Brand
+                        <br />
+                        architecture - Tone of voice - <br />
+                        Consumer, market, and <br />
+                        competitor research - Insights - <br />
+                        Fieldwork - Focus groups <br />
+                        Testing - Launch plans
+                      </Description>
+                    </motion.div>
+                  ) : (
+                    <>
+                      {scroll > 72 && scroll < 79 ? (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          viewport={{ once: true }}
+                          duration={2}
+                        >
+                          <Description>
+                            2 Verbal brand identity - Brand <br />
+                            audit - Naming - Positioning - <br />
+                            Differentiation - Brand
+                            <br />
+                            architecture - Tone of voice - <br />
+                            Consumer, market, and <br />
+                            competitor research - Insights - <br />
+                            Fieldwork - Focus groups <br />
+                            Testing - Launch plans
+                          </Description>
+                        </motion.div>
+                      ) : (
+                        <>
+                          {scroll > 80 && scroll < 87 ? (
+                            <motion.div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              viewport={{ once: true }}
+                              duration={2}
+                            >
+                              <Description>
+                                3 Verbal brand identity - Brand <br />
+                                audit - Naming - Positioning - <br />
+                                Differentiation - Brand
+                                <br />
+                                architecture - Tone of voice - <br />
+                                Consumer, market, and <br />
+                                competitor research - Insights - <br />
+                                Fieldwork - Focus groups <br />
+                                Testing - Launch plans
+                              </Description>
+                            </motion.div>
+                          ) : null}
+                        </>
+                      )}
+                    </>
+                  )}
+                </ContainerTxt>
+                <Img
+                  // className="pImage"
+                  src="/static/overview.png"
+                  width="305px"
+                  height="380px"
+                />
+              </Container>
+            </FlexCenter>
+            <FlexRightDiv className="sub__sections">
+              <div
+                className="vertical__text"
+                style={{
+                  flex: 2,
+                  border: "0px solid green",
+                  position: "relative",
+                  paddingRight: "10vw",
+                }}
+              >
+                {scroll > 63 && scroll < 71 ? (
+                  <RightText>
+                    <motion.p
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                      }}
+                      style={{
+                        transform: "rotate(-90deg)",
+                        fontSize: "1.25vw",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      Strategy
+                    </motion.p>
+                  </RightText>
+                ) : (
+                  <>
+                    {scroll > 72 && scroll < 79 ? (
+                      <>
+                        <motion.p
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20,
+                          }}
+                          style={{
+                            transform: "rotate(-90deg)",
+                            fontSize: "1.25vw",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          Strategy
+                        </motion.p>
+                        <motion.p
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20,
+                          }}
+                          style={{
+                            transform: "rotate(-90deg)",
+                            paddingRight: 30,
+                            fontSize: "1.25vw",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          Creative
+                        </motion.p>
+                      </>
+                    ) : (
+                      <>
+                        {scroll > 80 && scroll < 87 ? (
+                          <>
+                            <motion.p
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.25vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              Strategy
+                            </motion.p>
+                            <motion.p
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.25vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              Creative
+                            </motion.p>
+
+                            <motion.p
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                paddingRight: 30,
+                                fontSize: "1.25vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              campaign
+                            </motion.p>
+                          </>
+                        ) : null}
+                      </>
+                    )}
+                  </>
+                )}
+              </div>
+            </FlexRightDiv>
+          </FlexCont>
         </div>
       </div>
-      {/* <Container className="pSection">
-
-        <ContainerTxt className="pContent">
-          <Description>
-            
-            Verbal brand identity - Brand <br/>
-            audit - Naming - Positioning - <br/>
-            Differentiation - Brand<br/>
-            architecture - Tone of voice - <br/>
-            Consumer, market, and <br/>
-            competitor research - Insights - <br/>
-            Fieldwork - Focus groups <br/>
-            Testing - Launch plans
-          </Description>
-       
-        </ContainerTxt>
-        <Img
-          className="pImage"
-          src="/static/overview.png"
-          width="305px"
-          height="380px"
-        />
-      </Container> */}
-    </div>
+    </>
   );
 };
 

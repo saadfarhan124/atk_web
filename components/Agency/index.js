@@ -1,46 +1,79 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import gsap from "gsap";
-import Image from "next/image";
-import React, { useRef, useLayoutEffect } from "react";
+import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
-import ParallaxItem from "../Paralex";
 const Title = styled.p`
   font-family: "Graphik";
-  font-size: 57pt;
+  font-size: 6vw;
   font-weight: 700;
   color: white;
   text-align: right;
   padding-bottom: 5rem;
+  @media screen and (max-width: 400px) {
+    padding-bottom: 3rem;
+  }
 `;
 const Description = styled.p`
   font-family: "Graphik";
-  font-size: 30pt;
+  font-size: 2.5vw;
   font-weight: 400;
   color: white;
   text-align: right;
+  @media screen and (max-width: 1029px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 748px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 505px) {
+    font-size: 3vw;
+  }
 `;
 const Container = styled.div`
   position: relative;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-block: 10rem;
+  @media screen and (max-width: 542px) {
+    padding-block: 8rem;
+  }
+  @media screen and (max-width: 440px) {
+    padding-block: 10rem;
+  }
+  @media screen and (max-width: 400px) {
+    padding-block: 12rem;
+  }
 `;
 const ContainerTxt = styled.div`
-  margin-left: 30%;
+  padding-left: 25%;
+  padding-right: 10%;
 `;
 const ImgParallax = styled(Parallax)`
   position: absolute;
   top: 150px !important;
-  left: 100px !important;
+  left: 8% !important;
 `;
-const Img = styled.img``;
+const Img = styled.img`
+  width: 425px;
+  height: 520px;
+  @media screen and (max-width: 1029px) {
+    width: 325px;
+    height: 420px;
+  }
+  @media screen and (max-width: 748px) {
+    width: 225px;
+    height: 320px;
+  }
+  @media screen and (max-width: 505px) {
+    width: 145px;
+    height: 220px;
+  }
+`;
 const Agency = () => {
   return (
     <div>
-      <Container className="pSection">
-        <ContainerTxt className="pContent">
+      <Container>
+        <ContainerTxt>
           <Parallax speed={10}>
             <Title>WHY AGENCY TK?</Title>
             <Description>
@@ -52,12 +85,7 @@ const Agency = () => {
           </Parallax>
         </ContainerTxt>
         <ImgParallax speed={-10}>
-          <Img
-            className="pImage"
-            src="/static/why_agency.png"
-            width="305px"
-            height="380px"
-          />
+          <Img loading="lazy" src="/static/why_agency.png" />
         </ImgParallax>
       </Container>
     </div>
