@@ -487,3 +487,21 @@ html {
     margin-bottom: -10%;
   }
 }
+@media screen and (max-width: 1029px) {
+  .pImage {
+    width: 325px;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 748px) {
+  .pImage {
+    width: 225px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 505px) {
+  .pImage {
+    width: 145px;
+    height: 220px;
+  }
+}
