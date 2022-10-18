@@ -20,9 +20,9 @@ export default function Home() {
       <Scroll />
       {/* <Brand /> */}
       <Overview />
-      <div style={{height:'100vh'}}></div>
-      {/* <Agency />
-      <Footer /> */}
+      <div style={{height:'20vh'}}></div>
+      <Agency />
+      <Footer />
     </div>
   );
 }
