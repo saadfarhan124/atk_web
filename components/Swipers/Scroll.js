@@ -64,6 +64,7 @@ const Scroll = () => {
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
+                  className="title-div"
                   style={{
                     display: "flex",
                     border: "0px solid grey",
@@ -104,6 +105,7 @@ const Scroll = () => {
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
+                  className="title-div"
                   style={{
                     display: "flex",
                     border: "0px solid grey",
@@ -144,6 +146,7 @@ const Scroll = () => {
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
+                  className="title-div"
                   style={{
                     display: "flex",
                     border: "0px solid grey",
@@ -184,6 +187,7 @@ const Scroll = () => {
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
+                  className="title-div"
                   style={{
                     display: "flex",
                     border: "0px solid grey",
