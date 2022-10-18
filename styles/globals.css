@@ -239,7 +239,40 @@ html {
   position: absolute !important;
 }
 .slides {
-  height: 50vh !important;
+  height: 55vh !important;
+  width: 40% !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8rem;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  text-align: center; /* Animation */
+}
+.slides4 {
+  height: 60vh !important;
+  width: 40% !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8rem;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  text-align: center; /* Animation */
+}
+.slides5 {
+  height: 70vh !important;
+  width: 40% !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8rem;
+  margin-bottom: 10px;
+  background-color: white;
+  color: black;
+  text-align: center; /* Animation */
+}
+.slides7 {
+  height: 80vh !important;
   width: 40% !important;
   margin-left: auto;
   margin-right: auto;
@@ -275,18 +308,19 @@ html {
 .title::after {
   content: "";
   display: inline-block;
-  height: 0.5em;
+  height: 0.3em;
   vertical-align: bottom;
-  width: 100px;
+  width: 90px;
   margin-right: -100%;
   margin-left: 10px;
   border-top: 6px solid black;
 }
 .right-head {
   font-size: 32pt;
+  margin: -10px;
   font-weight: 500;
   color: black;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .right-list {
@@ -295,6 +329,71 @@ html {
   padding: 0.25rem;
 }
 
+@media screen and (max-width: 1354px) {
+  .title {
+    height: 50%;
+    color: black;
+    font-size: 30pt;
+    transform-origin: 0 50%;
+    transform: rotate(-360deg) translate(-50%, 50%);
+    -webkit-transform-origin: 0 50%;
+    font-weight: 600;
+    padding-top: -50% !important;
+    padding-left: -50%;
+  }
+  .title::after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 30px;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 6px solid black;
+  }
+  .right-head {
+    font-size: 20pt;
+    font-weight: 500;
+    color: black;
+  }
+  .right-list {
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 0.25rem;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    border: 0px solid red;
+    height: 30vh;
+  }
+  .title-div {
+    margin-top: -50%;
+    margin-left: -50%;
+  }
+  .slides4 {
+    height: 60vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides7 {
+    height: 80vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+}
 @media screen and (max-width: 1054px) {
   .title {
     height: 50%;
@@ -321,7 +420,6 @@ html {
     font-size: 20pt;
     font-weight: 500;
     color: black;
-    padding-bottom: -2rem;
   }
   .right-list {
     font-size: 10pt;
@@ -337,6 +435,17 @@ html {
   .title-div {
     margin-top: -50%;
     margin-left: -50%;
+  }
+  .slides7 {
+    height: 80vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
   }
 }
 @media screen and (max-width: 820px) {
@@ -366,7 +475,41 @@ html {
     margin-left: -50%;
   }
   .slides {
+    height: 30vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides4 {
     height: 40vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides5 {
+    height: 40vh !important;
+    width: 40% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+
+  .slides7 {
+    height: 50vh !important;
     width: 40% !important;
     margin-left: auto;
     margin-right: auto;
@@ -466,8 +609,74 @@ html {
     color: black;
     text-align: center; /* Animation */
   }
+  .slides4 {
+    height: 70vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides5 {
+    height: 70vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides7 {
+    height: 70vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
 }
 @media screen and (max-width: 768px) {
+  .slides4 {
+    height: 50vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides5 {
+    height: 60vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
+  .slides7 {
+    height: 70vh !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8rem;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Animation */
+  }
   .slides {
     height: 45vh !important;
     width: 50% !important;
@@ -484,7 +693,7 @@ html {
     font-weight: 500;
     color: black;
     padding-bottom: -5rem;
-    margin-bottom: -10%;
+    margin-bottom: -5%;
   }
 }
 @media screen and (max-width: 1029px) {
