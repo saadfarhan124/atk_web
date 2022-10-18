@@ -20,7 +20,7 @@ export default function Home() {
       <Scroll />
       {/* <Brand /> */}
       <Overview />
-      <div style={{height:'20vh'}}></div>
+      <div style={{ height: "20vh" }}></div>
       <Agency />
       <Footer />
     </div>
