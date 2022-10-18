@@ -204,13 +204,18 @@ html {
   position: relative;
   padding: 50px;
   height: 100vh;
-  background-color: black;
+
+  /* background-color: blue; */
+  background-image: url(../public/static/brand_strategy.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
 }
 .text1 {
   overflow-x: hidden;
   overflow-y: hidden;
   color: white;
-  font-size: 5rem;
+  font-size: 7rem;
+  font-style: italic;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -225,8 +230,8 @@ html {
   position: absolute !important;
 }
 .slides {
-  height: 40vh !important;
-  width: 50% !important;
+  height: 50vh !important;
+  width: 40% !important;
   margin-left: auto;
   margin-right: auto;
   font-size: 8rem;
@@ -234,4 +239,49 @@ html {
   background-color: white;
   color: black;
   text-align: center; /* Animation */
+}
+.imgw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 50vh;
+  background-color: #00026d !important;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  border: 0px solid red;
+  height: 40vh;
+}
+.title {
+  padding-right: 30px;
+  color: black;
+  font-size: 40pt;
+  transform-origin: 0 50%;
+  transform: rotate(-90deg) translate(-50%, 50%);
+  -webkit-transform-origin: 0 50%;
+  font-weight: 600;
+}
+.title::after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 100px;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 6px solid black;
+}
+.right-head {
+  font-size: 35pt;
+  font-weight: 500;
+  color: black;
+  padding-bottom: 2rem;
+}
+
+.right-list {
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0.25rem;
 }

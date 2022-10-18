@@ -16,9 +16,9 @@ export default function Home() {
       <Header />
       <Sliderr />
       <GlobalBrand />
-      <Scroll />
       <BrandStrategy />
-      <Brand />
+      <Scroll />
+      {/* <Brand /> */}
       <Overview />
       <Agency />
       <Footer />
