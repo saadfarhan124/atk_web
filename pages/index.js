@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 import Agency from "../components/Agency";
 import GlobalBrand from "../components/GlobalBrand";
 import BrandStrategy from "../components/BrandStrategy";
-import Brand from '../components/Brand';
+import Brand from "../components/Brand";
 import Overview from "../components/Overview";
-import Test from "../components/Test";
+import Scroll from "../components/Swipers/Scroll";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -17,15 +17,14 @@ export default function Home() {
       <Sliderr />
       <GlobalBrand />
       <BrandStrategy />
-      <Brand/>
-      <Overview/>
+      <Scroll />
+      {/* <Brand /> */}
+      <Overview />
       <Agency />
-      {/* <Test/> */}
       <Footer />
     </div>
   );
 }
-
 
 // mport Head from 'next/head'
 // import Image from 'next/image'
