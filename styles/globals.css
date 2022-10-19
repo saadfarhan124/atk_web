@@ -205,17 +205,19 @@ html {
   height: 100vh;
   background-color: orange;
 }
+
 .containerw {
   overflow: hidden;
   overflow-x: hidden;
+  scroll-snap-type: x mandatory;
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 50px;
   height: 100vh;
+  margin: 0 -2rem;
 
   /* background-color: blue; */
-  background-image: url(../public/static/brand_strategy.png);
+  background-image: url(../public/static/bs1.png);
   background-repeat: no-repeat;
   background-size: 100% 100vh;
 }
@@ -223,7 +225,7 @@ html {
   overflow-x: hidden;
   overflow-y: hidden;
   color: white;
-  font-size: 7rem;
+  font-size: 5.5rem;
   font-style: italic;
   text-align: center;
   display: flex;
@@ -232,7 +234,7 @@ html {
   height: "100vh";
 }
 .mySwiper {
-  margin-top: 10%;
+  margin-top: 10rem;
   height: 100vh !important;
   width: 100%;
   background-color: transparent !important;
@@ -241,8 +243,10 @@ html {
 
 .slides {
   /* height: 55vh !important; */
+
   min-height: 100px !important;
   width: 40% !important;
+  transition: transform 0.5s ease;
   margin-left: auto;
   margin-right: auto;
   font-size: 8rem;
