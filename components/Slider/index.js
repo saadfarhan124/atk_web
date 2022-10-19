@@ -6,7 +6,7 @@ const Parent = styled.div`
   width: 100%;
   background-color: black;
   position: relative;
-  height:80vh;
+  height: 80vh;
 `;
 const Marquee = keyframes`
 0% {
@@ -21,14 +21,12 @@ const Slide = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("static/createbg.jpeg");
- 
-  background-size:cover;
-  background-position-y: 0.00rem; 
 
-
+  background-size: cover;
+  background-position-y: 1rem;
 `;
 const Type = styled.div`
-  height:80vh;
+  height: 80vh;
   width: 96vw;
   background-size: auto 80vh;
   background-repeat: repeat-x;
@@ -38,18 +36,21 @@ const Type = styled.div`
   background-image: url("/static/create.png");
 `;
 const Mytext = styled.div`
-position: absolute;
-
-top: 50%;
-left: 50%;
-transform: translateX(-50%) translateY(-50%);
-text-transform: uppercase;
-font-size: 30pt;
-font-family: GraphikItalic;
-font-weight: bolder;
-color: white;
-overflow-x:hidden;
-
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* transform: translateX(-50%) translateY(-50%); */
+  text-transform: uppercase;
+  font-size: 4vw;
+  letter-spacing: 0.8vw;
+  font-family: "Graphik";
+  font-weight: bolder;
+  color: white;
+  overflow-x: hidden;
 `;
 
 const Sliderr = () => {

@@ -12,11 +12,38 @@ const Title = styled.p`
   text-align: right;
   padding-bottom: 5rem;
 `;
+
+const Desc = styled.p`
+  font-family: "Graphik";
+  font-size: 56pt;
+  font-weight: 400;
+  text-align: left;
+  @media screen and (max-width: 1029px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 748px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 505px) {
+    font-size: 3vw;
+  }
+`;
+
 const Description = styled.p`
   font-family: "Graphik";
   font-size: 42.8pt;
   font-weight: 400;
   text-align: right;
+  
+  @media screen and (max-width: 1029px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 748px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 505px) {
+    font-size: 3vw;
+  }
 `;
 const Container = styled.div`
   position: relative;
@@ -25,11 +52,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  @media screen and (max-width: 542px) {
+    padding-block: 8rem;
+  }
+  @media screen and (max-width: 440px) {
+    padding-block: 10rem;
+  }
+  @media screen and (max-width: 400px) {
+    padding-block: 12rem;
+  }
 `;
 const ContainerTxt = styled.div`
   position: relative;
 
-  margin-left: 30%;
+  margin-left: 40%;
+  
+  /* padding-left: 25%;
+  padding-right: 10%; */
 `;
 const ImgsParallax = styled(Parallax)`
   position: absolute;
@@ -49,13 +88,13 @@ const GlobalBrand = () => {
       <Container className="pSection">
         <ContainerTxt
           className="pContent"
-          style={{ marginLeft: 0, marginRight: "30%" }}
+          style={{ marginLeft: "5%", marginRight: "30%" }}
         >
           <Parallax speed={10}>
-          <Description style={{ fontSize: "56pt", textAlign: "left" }}>
-            We are a global brand and design agency and together we challenge
-            what is now to create what’s next.
-          </Description>
+            <Desc>
+              We are a global brand and design agency and together we challenge
+              what is now to create what’s next.
+            </Desc>
           </Parallax>
         </ContainerTxt>
         <ImgsParallax speed={-10}>
@@ -68,27 +107,27 @@ const GlobalBrand = () => {
         </ImgsParallax>
       </Container>
       <Container className="pSection">
-        <ContainerTxt className="pContent">
-        <Parallax speed={-10}>
-          <Description>
-            We work with clients
-            <br /> worldwide and of all
-            <br /> shapes and sizes, so
-            <br /> we’re never held back
-            <br /> by convention or
-            <br /> worried about what
-            <br /> everyone else is doing.
-          </Description>
+        <ContainerTxt className="pContent" style={{marginRight:'0%'}}>
+          <Parallax speed={-10}>
+            <Description>
+              We work with clients
+              <br /> worldwide and of all
+              <br /> shapes and sizes, so
+              <br /> we’re never held back
+              <br /> by convention or
+              <br /> worried about what
+              <br /> everyone else is doing.
+            </Description>
           </Parallax>
         </ContainerTxt>
-       <ImgParallax speed={10}>
-        <img
-          className="pImage"
-          src="/static/global_2.png"
-          width="305px"
-          height="380px"
-        />
-      </ImgParallax>
+        <ImgParallax speed={10}>
+          <img
+            className="pImage"
+            src="/static/global_2.png"
+            width="305px"
+            height="380px"
+          />
+        </ImgParallax>
       </Container>
     </div>
   );

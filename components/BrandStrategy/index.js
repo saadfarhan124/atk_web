@@ -11,6 +11,18 @@ const Title = styled.p`
   color: white;
   text-align: left;
   padding-bottom: 5rem;
+  @media screen and (max-width: 400px) {
+    padding-bottom: 3rem;
+  }
+  @media screen and (max-width: 1029px) {
+    font-size: 67pt;
+  }
+  @media screen and (max-width: 748px) {
+    font-size: 47pt;
+  }
+  @media screen and (max-width: 505px) {
+    font-size: 27pt;
+  }
 `;
 const Description = styled.p`
   font-family: "Graphik";
@@ -21,9 +33,27 @@ const Description = styled.p`
   position: absolute;
   right: 0px;
   top: 150px;
+  @media screen and (max-width: 1029px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 748px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 505px) {
+    font-size: 3vw;
+  }
 `;
 const Container = styled.div`
   position: relative;
+  @media screen and (max-width: 542px) {
+    padding-block: 8rem;
+  }
+  @media screen and (max-width: 440px) {
+    padding-block: 10rem;
+  }
+  @media screen and (max-width: 400px) {
+    padding-block: 12rem;
+  }
 `;
 const ImgContainer = styled.div`
   position: absolute;
@@ -32,6 +62,9 @@ const ImgContainer = styled.div`
 `;
 const ContainerTxt = styled.div`
   position: relative;
+  margin-left: 5%;
+  /* padding-left: 25%;
+  padding-right: 10%; */
 `;
 const Imgs = styled.img``;
 const BrandStrategy = () => {
@@ -43,9 +76,9 @@ const BrandStrategy = () => {
         <ContainerTxt className="pContent">
           <Parallax speed={-10}>
             <Title>
-              Brand
-              <br /> Strategy
-              <br /> Process
+              BRAND
+              <br /> STRATEGY
+              <br /> PROCESS
             </Title>
           </Parallax>
         </ContainerTxt>
