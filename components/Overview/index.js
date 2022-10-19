@@ -218,12 +218,8 @@ transform: rotate(-90deg);
   
 `;
 
-const Temp =styled.div`
-@media (max-width: 375px) and (max-width:480px) {
-  padding-top:0vw;
-  font-size: 5vw;
-}
-`
+
+
 const Overview = () => {
   const [scroll, setScroll] = useState(0);
   console.log(scroll);
