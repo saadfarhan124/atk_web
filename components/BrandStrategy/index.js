@@ -1,9 +1,6 @@
-import gsap from "gsap";
-import Image from "next/image";
-import React, { useRef, useLayoutEffect } from "react";
+import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
-import ParallaxItem from "../Paralex";
 const Title = styled.p`
   font-family: "Graphik";
   font-size: 87pt;
@@ -26,39 +23,51 @@ const Title = styled.p`
 `;
 const Description = styled.p`
   font-family: "Graphik";
-  font-size: 19pt;
+  font-size: 2vw;
   font-weight: 400;
   color: white;
   text-align: right;
   position: absolute;
-  right: 0px;
-  top: 150px;
+  right: 10px;
+  width: 50%;
+  bottom: -70px;
   @media screen and (max-width: 1029px) {
-    font-size: 3vw;
+    font-size: 2vw;
   }
   @media screen and (max-width: 748px) {
-    font-size: 3vw;
+    font-size: 2vw;
+    bottom: -50px;
   }
   @media screen and (max-width: 505px) {
-    font-size: 3vw;
+    font-size: 2vw;
+    right: 10px;
+  bottom: -40px;
   }
 `;
 const Container = styled.div`
   position: relative;
   @media screen and (max-width: 542px) {
-    padding-block: 8rem;
+    padding-block: 3rem;
   }
   @media screen and (max-width: 440px) {
-    padding-block: 10rem;
+    padding-block: 3rem;
   }
   @media screen and (max-width: 400px) {
-    padding-block: 12rem;
+    padding-block: 3rem;
   }
 `;
 const ImgContainer = styled.div`
   position: absolute;
-  top: 50px !important;
+  top: -100px !important;
   right: 100px !important;
+  @media screen and (max-width: 748px) {
+    top: -50px !important;
+  right: 50px !important;
+  }
+  @media screen and (max-width: 505px) {
+    top: -10px !important;
+  right: 10px !important;
+  }
 `;
 const ContainerTxt = styled.div`
   position: relative;
@@ -66,14 +75,27 @@ const ContainerTxt = styled.div`
   /* padding-left: 25%;
   padding-right: 10%; */
 `;
-const Imgs = styled.img``;
+const Imgs = styled.img`
+  width: 657px;
+  height: 390px;
+  @media screen and (max-width: 1029px) {
+    width: 557px;
+  height: 290px;
+  }
+  @media screen and (max-width: 748px) {
+    width: 257px;
+  height: 190px;
+  }
+  @media screen and (max-width: 505px) {
+    width: 180px;
+    height: 140px;
+  }
+`;
 const BrandStrategy = () => {
-  const ag = useRef();
-
   return (
-    <div ref={ag}>
-      <Container className="pSection">
-        <ContainerTxt className="pContent">
+    <div style={{ marginTop: 200 }}>
+      <Container>
+        <ContainerTxt>
           <Parallax speed={-10}>
             <Title>
               BRAND
@@ -84,12 +106,7 @@ const BrandStrategy = () => {
         </ContainerTxt>
         <ImgContainer>
           <Parallax speed={10}>
-            <Imgs
-              className="pImage"
-              src="/static/brand.png"
-              width="457px"
-              height="290px"
-            />
+            <Imgs src="/static/brand.png" />
 
             <Description>
               Choose an agency where you can work better, smarter, and stronger
