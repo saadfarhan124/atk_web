@@ -68,7 +68,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "90%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -87,6 +87,7 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">
@@ -113,7 +114,7 @@ const Scroll = () => {
                     border: "0px solid grey",
                     height: "100%",
 
-                    paddingTop: "50%",
+                    paddingTop: "80%",
                     paddingLeft: "50%",
                     justifyContent: "center",
                     border: "0px solid red",
@@ -130,6 +131,7 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Fieldwork_</div>
@@ -151,9 +153,9 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "80%",
 
-                    paddingTop: "50%",
+                    paddingTop: "100%",
                     paddingLeft: "50%",
                     justifyContent: "center",
                     border: "0px solid red",
@@ -170,14 +172,13 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Workshop_</div>
                 <div className="right-list">Collaborative workshop</div>
                 <div className="right-list">Q & A</div>
-
                 <div className="right-list">Group exercises</div>
-
                 <div className="right-list">
                   Identification of brand <br />
                   objectives and opportunities{" "}
@@ -185,7 +186,7 @@ const Scroll = () => {
               </div>
             </div>
           </SwiperSlide>{" "}
-          <SwiperSlide className="slides4">
+          <SwiperSlide className="slides" id="slide4">
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
@@ -193,7 +194,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "75%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -212,6 +213,7 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Brand Strategy_</div>
@@ -232,7 +234,7 @@ const Scroll = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="slides5">
+          <SwiperSlide className="slides" id="slide5">
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
@@ -240,7 +242,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "70%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -259,6 +261,7 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Brand Development_</div>
@@ -285,7 +288,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "95%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -304,6 +307,7 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Testing_</div>
@@ -321,7 +325,7 @@ const Scroll = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="slides7">
+          <SwiperSlide className="slides" id="slide7">
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
@@ -329,7 +333,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "65%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -348,6 +352,8 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">Creative Production_</div>
