@@ -41,6 +41,35 @@ const Description = styled.p`
   @media (max-width: 862px) {
   
   }
+  @media (max-width: 635px)  {
+    
+    padding:0;
+   
+  }
+  
+ 
+  @media (max-width: 650px) {
+  border:0px solid red;
+  padding:0;
+  padding-top:4rem;
+  font-size:1rem;
+  padding-right:5rem;
+  }
+  @media only screen and (max-width: 600px )  {
+    padding-right:0;
+   }
+   @media only screen and (max-width: 530px )  {
+    padding-right:0;
+   }
+   @media only screen and (max-width: 480px )  {
+  font-size:0.75rem;
+    padding-right:0;
+   }
+  @media (max-width: 375px) {
+    border:0px solid white;
+    padding:0;
+    padding-top:5rem;
+  }
 `;
 const Container = styled.div`
   position: relative;
@@ -56,6 +85,22 @@ const Img = styled.img`
   position: absolute;
   top: 0px !important;
   left: 2vw !important;
+  width:305px;
+  height:380px;
+
+  @media (max-width:674px){
+    width:250px;
+    height:250px
+  }
+  @media only screen and (max-width: 480px )  {
+  
+    width:200px;
+    height:200px
+   }
+   @media (max-width: 460px) {
+    width:160px;
+    height:200px
+  }
 `;
 
 const FlexCont = styled.div`
@@ -88,8 +133,16 @@ const FlexRightDiv = styled.div`
     flex: 1;
   }
   @media (max-width: 768px) {
-    display: none;
+    flex: 1;
   }
+  @media (max-width: 375px) {
+    flex: 1;
+   padding:0
+  }
+  @media (max-width: 460px) {
+    
+    border:0px solid white;
+   }
 `;
 
 const FlexLeftDiv = styled.div`
@@ -100,11 +153,12 @@ const FlexLeftDiv = styled.div`
 
     flex: 1;
   }
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     flex: 1;
+    
   }
   @media (max-width: 798px) {
-    flex: 1;
+   display:none
   }
 `;
 const FlexCenter = styled.div`
@@ -122,6 +176,16 @@ const FlexCenter = styled.div`
   @media (max-width: 860px) {
     flex: 4;
   }
+  @media (max-width: 460px) {
+    flex: 2;
+   border:0px solid white;
+  }
+  @media (max-width: 375px) {
+    flex: 2;
+    padding:0;
+    border:0px solid white;
+  }
+  
 `;
 
 
@@ -147,12 +211,18 @@ transform: rotate(-90deg);
                             font-size: 5vw;
   }
   @media (max-width: 768px) {
-                            /* padding-top: 15vw;
-                            padding-right: 10vw; */
-                            /* font-size: 5vw; */
+                           padding-top:0vw;
+                           font-size: 5vw;
   }
 
   
+`;
+
+const Temp =styled.div`
+@media (max-width: 375px) and (max-width:480px) {
+  padding-top:0vw;
+  font-size: 5vw;
+}
 `
 const Overview = () => {
   const [scroll, setScroll] = useState(0);
@@ -343,8 +413,7 @@ const Overview = () => {
                 <Img
                   // className="pImage"
                   src="/static/overview.png"
-                  width="305px"
-                  height="380px"
+                 
                 />
               </Container>
             </FlexCenter>
@@ -370,7 +439,7 @@ const Overview = () => {
                       }}
                       style={{
                         transform: "rotate(-90deg)",
-                        fontSize: "1.25vw",
+                        fontSize: "1.75vw",
                         textTransform: "uppercase",
                       }}
                     >
@@ -391,7 +460,7 @@ const Overview = () => {
                           }}
                           style={{
                             transform: "rotate(-90deg)",
-                            fontSize: "1.25vw",
+                            fontSize: "1.75vw",
                             textTransform: "uppercase",
                           }}
                         >
@@ -408,7 +477,7 @@ const Overview = () => {
                           style={{
                             transform: "rotate(-90deg)",
                             paddingRight: 30,
-                            fontSize: "1.25vw",
+                            fontSize: "1.75vw",
                             textTransform: "uppercase",
                           }}
                         >
@@ -429,7 +498,7 @@ const Overview = () => {
                               }}
                               style={{
                                 transform: "rotate(-90deg)",
-                                fontSize: "1.25vw",
+                                fontSize: "1.75vw",
                                 textTransform: "uppercase",
                               }}
                             >
@@ -445,7 +514,7 @@ const Overview = () => {
                               }}
                               style={{
                                 transform: "rotate(-90deg)",
-                                fontSize: "1.25vw",
+                                fontSize: "1.75vw",
                                 textTransform: "uppercase",
                               }}
                             >
@@ -463,7 +532,7 @@ const Overview = () => {
                               style={{
                                 transform: "rotate(-90deg)",
                                 paddingRight: 30,
-                                fontSize: "1.25vw",
+                                fontSize: "1.75vw",
                                 textTransform: "uppercase",
                               }}
                             >
