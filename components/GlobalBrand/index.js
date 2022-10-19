@@ -8,30 +8,30 @@ const Desc = styled.p`
   font-weight: 400;
   text-align: left;
   @media screen and (max-width: 1029px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   @media screen and (max-width: 748px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   @media screen and (max-width: 505px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 `;
 
 const Description = styled.p`
   font-family: "Graphik";
-  font-size: 42.8pt;
+  font-size: 3.5vw;
   font-weight: 400;
   text-align: right;
 
   @media screen and (max-width: 1029px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   @media screen and (max-width: 748px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   @media screen and (max-width: 505px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 `;
 const Container = styled.div`
@@ -63,11 +63,49 @@ const ImgsParallax = styled(Parallax)`
   position: absolute;
   top: 150px !important;
   right: 150px !important;
+  @media screen and (max-width: 677px) {
+    right: 50px !important;
+  }
+  @media screen and (max-width: 550px) {
+    right: 10px !important;
+  }
 `;
 const ImgParallax = styled(Parallax)`
   position: absolute;
   top: 150px !important;
   left: 100px !important;
+  @media screen and (max-width: 677px) {
+    left: 50px !important;
+  }
+  @media screen and (max-width: 550px) {
+    left: 10px !important;
+  }
+`;
+const Imgs = styled.img`
+  width: 305px;
+  height: 380px;
+  @media screen and (max-width: 1029px) {
+    width: 205px;
+  height: 280px;
+  }
+
+  /* @media screen and (max-width: 505px) {
+    width: 180px;
+    height: 140px;
+  } */
+`;
+const Img = styled.img`
+  width: 305px;
+  height: 380px;
+  @media screen and (max-width: 1029px) {
+    width: 205px;
+  height: 280px;
+  }
+
+  /* @media screen and (max-width: 505px) {
+    width: 180px;
+    height: 140px;
+  } */
 `;
 const GlobalBrand = () => {
   return (
@@ -82,7 +120,7 @@ const GlobalBrand = () => {
           </Parallax>
         </ContainerTxt>
         <ImgsParallax speed={-10}>
-          <img src="/static/global_1.png" width="305px" height="380px" />
+          <Imgs src="/static/global_1.png" width="305px" height="380px" />
         </ImgsParallax>
       </Container>
       <Container>
@@ -100,7 +138,7 @@ const GlobalBrand = () => {
           </Parallax>
         </ContainerTxt>
         <ImgParallax speed={10}>
-          <img src="/static/global_2.png" width="305px" height="380px" />
+          <Img src="/static/global_2.png" />
         </ImgParallax>
       </Container>
     </div>
