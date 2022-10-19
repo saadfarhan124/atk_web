@@ -10,9 +10,7 @@ const Title = styled.p`
   font-weight: 500;
   color: white;
   text-align: right;
-  padding-top: 4rem;
-  text-transform: uppercase;
-  padding-right: 3rem;
+  padding-top: 20px;
 `;
 const Description = styled.p`
   width: 40vw;
@@ -41,6 +39,36 @@ const Description = styled.p`
     border: 0px solid red;
   }
   @media (max-width: 862px) {
+  
+  }
+  @media (max-width: 635px)  {
+    
+    padding:0;
+   
+  }
+  
+ 
+  @media (max-width: 650px) {
+  border:0px solid red;
+  padding:0;
+  padding-top:4rem;
+  font-size:1rem;
+  padding-right:5rem;
+  }
+  @media only screen and (max-width: 600px )  {
+    padding-right:0;
+   }
+   @media only screen and (max-width: 530px )  {
+    padding-right:0;
+   }
+   @media only screen and (max-width: 480px )  {
+  font-size:0.75rem;
+    padding-right:0;
+   }
+  @media (max-width: 375px) {
+    border:0px solid white;
+    padding:0;
+    padding-top:5rem;
   }
 `;
 const Container = styled.div`
@@ -57,6 +85,22 @@ const Img = styled.img`
   position: absolute;
   top: 0px !important;
   left: 2vw !important;
+  width:305px;
+  height:380px;
+
+  @media (max-width:674px){
+    width:250px;
+    height:250px
+  }
+  @media only screen and (max-width: 480px )  {
+  
+    width:200px;
+    height:200px
+   }
+   @media (max-width: 460px) {
+    width:160px;
+    height:200px
+  }
 `;
 
 const FlexCont = styled.div`
@@ -84,13 +128,21 @@ const FlexRightDiv = styled.div`
   @media (max-width: 1190px) {
     flex: 1;
   }
-
+  
   @media (max-width: 902px) {
     flex: 1;
   }
   @media (max-width: 768px) {
-    display: none;
+    flex: 1;
   }
+  @media (max-width: 375px) {
+    flex: 1;
+   padding:0
+  }
+  @media (max-width: 460px) {
+    
+    border:0px solid white;
+   }
 `;
 
 const FlexLeftDiv = styled.div`
@@ -98,13 +150,15 @@ const FlexLeftDiv = styled.div`
   border: 0px solid green;
   position: relative;
   @media (max-width: 876px) {
+
     flex: 1;
   }
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     flex: 1;
+    
   }
   @media (max-width: 798px) {
-    flex: 1;
+   display:none
   }
 `;
 const FlexCenter = styled.div`
@@ -117,38 +171,60 @@ const FlexCenter = styled.div`
   }
   @media (max-width: 916px) {
     flex: 4;
-    border: 0px solid red;
+ border: 0px solid red;
   }
   @media (max-width: 860px) {
     flex: 4;
   }
+  @media (max-width: 460px) {
+    flex: 2;
+   border:0px solid white;
+  }
+  @media (max-width: 375px) {
+    flex: 2;
+    padding:0;
+    border:0px solid white;
+  }
+  
 `;
+
+
+
 
 const LeftTextPara = styled.p`
-  padding-top: 6vw;
-  transform: rotate(-90deg);
-  font-size: 4vw;
-  text-transform: uppercase;
+padding-top: 6vw;
+transform: rotate(-90deg);
+                          font-size: 4vw;
+                          text-transform: uppercase;
 
-  @media (max-width: 1162px) {
-    padding-top: 15vw;
-    font-size: 5vw;
+                          @media (max-width: 1162px) {
+                            padding-top: 15vw;
+                            font-size: 5vw;
   }
   @media (max-width: 912px) {
-    padding-top: 10vw;
-    font-size: 5vw;
-    padding-right: 10vw;
+                            padding-top: 10vw;
+                            font-size: 5vw;
+                            padding-right: 10vw;
   }
   @media (max-width: 974px) {
-    padding-top: 10vw;
-    font-size: 5vw;
+                            padding-top: 10vw;
+                            font-size: 5vw;
   }
   @media (max-width: 768px) {
-    /* padding-top: 15vw;
-                            padding-right: 10vw; */
-    /* font-size: 5vw; */
+                           padding-top:0vw;
+                           font-size: 5vw;
   }
+
+  
 `;
+
+const SmallText=styled.div`
+transform: rotate(-90deg);
+                                font-size: 1.75vw;
+
+                                text-transform: uppercase;
+`
+
 const Overview = () => {
   const [scroll, setScroll] = useState(0);
   console.log(scroll);
@@ -213,7 +289,7 @@ const Overview = () => {
           </Title>
           <FlexCont>
             <FlexLeftDiv className="vertical__text">
-              {scroll > 63 && scroll < 71 ? (
+              {scroll > 56 && scroll < 71 ? (
                 <motion.p
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -224,7 +300,10 @@ const Overview = () => {
                   }}
                   style={{ transform: "rotate(-90deg)" }}
                 >
-                  <LeftTextPara>Strategy</LeftTextPara>
+                  <LeftTextPara
+                  >
+                    Strategy
+                  </LeftTextPara>
                 </motion.p>
               ) : (
                 <>
@@ -239,7 +318,10 @@ const Overview = () => {
                       }}
                       style={{ transform: "rotate(-90deg)" }}
                     >
-                      <LeftTextPara>Creative</LeftTextPara>
+                      <LeftTextPara
+                      >
+                        Creative
+                      </LeftTextPara>
                     </motion.p>
                   ) : (
                     <>
@@ -254,7 +336,10 @@ const Overview = () => {
                           }}
                           style={{ transform: "rotate(-90deg)" }}
                         >
-                          <LeftTextPara>campaign</LeftTextPara>
+                          <LeftTextPara
+                          >
+                            campaign
+                          </LeftTextPara>
                         </motion.p>
                       ) : null}
                     </>
@@ -265,7 +350,7 @@ const Overview = () => {
             <FlexCenter>
               <Container className="pSection">
                 <ContainerTxt className="pContent">
-                  {scroll > 63 && scroll < 71 ? (
+                  {scroll > 56 && scroll < 71 ? (
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -273,7 +358,7 @@ const Overview = () => {
                       duration={2}
                     >
                       <Description>
-                        1 Verbal brand identity - Brand <br />
+                        Verbal brand identity - Brand <br />
                         audit - Naming - Positioning - <br />
                         Differentiation - Brand
                         <br />
@@ -294,15 +379,11 @@ const Overview = () => {
                           duration={2}
                         >
                           <Description>
-                            2 Verbal brand identity - Brand <br />
-                            audit - Naming - Positioning - <br />
-                            Differentiation - Brand
-                            <br />
-                            architecture - Tone of voice - <br />
-                            Consumer, market, and <br />
-                            competitor research - Insights - <br />
-                            Fieldwork - Focus groups <br />
-                            Testing - Launch plans
+                            Visual brand identity Design <br />
+                            Art direction  - 3D work  <br /> Motion graphics -Film<br /> Copywriting -  Differentiation <br />
+
+                            Photography   <br />
+
                           </Description>
                         </motion.div>
                       ) : (
@@ -315,15 +396,13 @@ const Overview = () => {
                               duration={2}
                             >
                               <Description>
-                                3 Verbal brand identity - Brand <br />
-                                audit - Naming - Positioning - <br />
-                                Differentiation - Brand
+                                The big idea -Launch campaigns
                                 <br />
-                                architecture - Tone of voice - <br />
-                                Consumer, market, and <br />
-                                competitor research - Insights - <br />
-                                Fieldwork - Focus groups <br />
-                                Testing - Launch plans
+                                Amplification campaigns <br />
+                                Channel strategy
+                                <br />
+                                Implementation ideas  <br />
+
                               </Description>
                             </motion.div>
                           ) : null}
@@ -335,8 +414,7 @@ const Overview = () => {
                 <Img
                   // className="pImage"
                   src="/static/overview.png"
-                  width="305px"
-                  height="380px"
+                 
                 />
               </Container>
             </FlexCenter>
@@ -350,117 +428,201 @@ const Overview = () => {
                   paddingRight: "10vw",
                 }}
               >
-                {scroll > 63 && scroll < 71 ? (
+                {scroll > 56 && scroll < 71 ? (
                   <RightText>
-                    <motion.p
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20,
-                      }}
-                      style={{
-                        transform: "rotate(-90deg)",
-                        fontSize: "1.25vw",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      Strategy
-                    </motion.p>
+                   <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                                display:'flex',
+                                flexDirection:'row',
+                                alignItems:'center',
+                                border:'0px solid white'
+                              }}
+                            >
+                              <div style={{border:'0px solid white',paddingRight:'10px'}}>
+                              Strategy </div>
+
+                              <div style={{border:'1px solid white',width:'5vw'}}>
+                              
+                              </div>
+                            </motion.div>
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              Creative
+                            </motion.div>
+
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              campaign
+                            </motion.div>
                   </RightText>
                 ) : (
                   <>
                     {scroll > 72 && scroll < 79 ? (
                       <>
-                        <motion.p
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 260,
-                            damping: 20,
-                          }}
-                          style={{
-                            transform: "rotate(-90deg)",
-                            fontSize: "1.25vw",
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          Strategy
-                        </motion.p>
-                        <motion.p
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 260,
-                            damping: 20,
-                          }}
-                          style={{
-                            transform: "rotate(-90deg)",
-                            paddingRight: 30,
-                            fontSize: "1.25vw",
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          Creative
-                        </motion.p>
+                          <RightText>
+                  
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              Strategy
+                            </motion.div>
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                                display:'flex',
+                                flexDirection:'row',
+                                alignItems:'center',
+                                border:'0px solid white'
+                              }}
+                            >
+                              <div style={{border:'0px solid white',paddingRight:'10px'}}>
+                               Creative</div>
+
+                              <div style={{border:'1px solid white',width:'5vw'}}>
+                              
+                              </div>
+                            </motion.div>
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20,
+                              }}
+                              style={{
+                                transform: "rotate(-90deg)",
+                                
+                                fontSize: "1.75vw",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              campaign
+                            </motion.div>
+                  </RightText>
                       </>
                     ) : (
                       <>
                         {scroll > 80 && scroll < 87 ? (
                           <>
-                            <motion.p
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              transition={{
-                                type: "spring",
-                                stiffness: 260,
-                                damping: 20,
-                              }}
-                              style={{
-                                transform: "rotate(-90deg)",
-                                fontSize: "1.25vw",
-                                textTransform: "uppercase",
-                              }}
-                            >
-                              Strategy
-                            </motion.p>
-                            <motion.p
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              transition={{
-                                type: "spring",
-                                stiffness: 260,
-                                damping: 20,
-                              }}
-                              style={{
-                                transform: "rotate(-90deg)",
-                                fontSize: "1.25vw",
-                                textTransform: "uppercase",
-                              }}
-                            >
-                              Creative
-                            </motion.p>
+                           <RightText>
+                  
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                    style={{
+                      transform: "rotate(-90deg)",
+                      fontSize: "1.75vw",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Strategy
+                  </motion.div>
+                 
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                    style={{
+                      transform: "rotate(-90deg)",
+                      
+                      fontSize: "1.75vw",
+                      textTransform: "uppercase",
+                    }}
+                  >Creative
+                    
+                  </motion.div>
 
-                            <motion.p
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              transition={{
-                                type: "spring",
-                                stiffness: 260,
-                                damping: 20,
-                              }}
-                              style={{
-                                transform: "rotate(-90deg)",
-                                paddingRight: 30,
-                                fontSize: "1.25vw",
-                                textTransform: "uppercase",
-                              }}
-                            >
-                              campaign
-                            </motion.p>
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                    style={{
+                      transform: "rotate(-90deg)",
+                      fontSize: "1.75vw",
+                      textTransform: "uppercase",
+                      display:'flex',
+                      flexDirection:'row',
+                      alignItems:'center',
+                      border:'0px solid white'
+                    }}
+                  >
+                    <div style={{border:'0px solid white',paddingRight:'10px'}}>
+                    campaign</div>
+
+                    <div style={{border:'1px solid white',width:'5vw'}}>
+                    
+                    </div>
+                  </motion.div>
+        </RightText>
                           </>
                         ) : null}
                       </>

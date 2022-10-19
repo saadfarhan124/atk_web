@@ -68,7 +68,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "90%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -87,17 +87,20 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
                 <div className="right-head">
                   Immerse & <br /> Research_
                 </div>
+
                 <div className="right-list">Brand immersion</div>
                 <div className="right-list">Brand audit</div>
 
                 <div className="right-list">Market research</div>
 
                 <div className="right-list">Competitor analysis</div>
+                <div className="right-list">Audience analysis</div>
               </div>
             </div>
           </SwiperSlide>{" "}
@@ -111,7 +114,7 @@ const Scroll = () => {
                     border: "0px solid grey",
                     height: "100%",
 
-                    paddingTop: "50%",
+                    paddingTop: "80%",
                     paddingLeft: "50%",
                     justifyContent: "center",
                     border: "0px solid red",
@@ -128,17 +131,17 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
-                <div className="right-head">
-                  Immerse & <br /> Research_
+                <div className="right-head">Fieldwork_</div>
+
+                <div className="right-list">
+                  Customer, employee <br /> or partner interviews
                 </div>
-                <div className="right-list">Brand immersion</div>
-                <div className="right-list">Brand audit</div>
-
-                <div className="right-list">Market research</div>
-
-                <div className="right-list">Competitor analysis</div>
+                <div className="right-list">Questionnaires</div>
+                <div className="right-list">Polls</div>
+                <div className="right-list">Pop-up agency</div>
               </div>
             </div>
           </SwiperSlide>{" "}
@@ -150,9 +153,9 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "80%",
 
-                    paddingTop: "50%",
+                    paddingTop: "100%",
                     paddingLeft: "50%",
                     justifyContent: "center",
                     border: "0px solid red",
@@ -169,21 +172,21 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
-                <div className="right-head">
-                  Immerse & <br /> Research_
+                <div className="right-head">Workshop_</div>
+                <div className="right-list">Collaborative workshop</div>
+                <div className="right-list">Q & A</div>
+                <div className="right-list">Group exercises</div>
+                <div className="right-list">
+                  Identification of brand <br />
+                  objectives and opportunities{" "}
                 </div>
-                <div className="right-list">Brand immersion</div>
-                <div className="right-list">Brand audit</div>
-
-                <div className="right-list">Market research</div>
-
-                <div className="right-list">Competitor analysis</div>
               </div>
             </div>
           </SwiperSlide>{" "}
-          <SwiperSlide className="slides">
+          <SwiperSlide className="slides" id="slide4">
             <div className="flex-container">
               <div style={{ flex: 1, border: "0px solid green" }}>
                 <div
@@ -191,7 +194,7 @@ const Scroll = () => {
                   style={{
                     display: "flex",
                     border: "0px solid grey",
-                    height: "100%",
+                    height: "75%",
 
                     paddingTop: "50%",
                     paddingLeft: "50%",
@@ -210,20 +213,172 @@ const Scroll = () => {
                   border: "0px solid green",
                   paddingLeft: "1rem",
                   paddingTop: "2rem",
+                  textAlign: "left",
                 }}
               >
-                <div className="right-head">
-                  Immerse & <br /> Research_
+                <div className="right-head">Brand Strategy_</div>
+
+                <div className="right-list">Audience personas</div>
+                <div className="right-list">
+                  Brand positioning & Differentiation
                 </div>
-                <div className="right-list">Brand immersion</div>
-                <div className="right-list">Brand audit</div>
 
-                <div className="right-list">Market research</div>
+                <div className="right-list">Value proposition</div>
 
-                <div className="right-list">Competitor analysis</div>
+                <div className="right-list">Brand purpose</div>
+                <div className="right-list">Tone of voice</div>
+                <div className="right-list">Values and vision</div>
+                <div className="right-list">Archetypes</div>
+                <div className="right-list">Messaging</div>
+                <div className="right-list">Brand compass</div>
               </div>
             </div>
           </SwiperSlide>
+          <SwiperSlide className="slides" id="slide5">
+            <div className="flex-container">
+              <div style={{ flex: 1, border: "0px solid green" }}>
+                <div
+                  className="title-div"
+                  style={{
+                    display: "flex",
+                    border: "0px solid grey",
+                    height: "70%",
+
+                    paddingTop: "50%",
+                    paddingLeft: "50%",
+                    justifyContent: "center",
+                    border: "0px solid red",
+                  }}
+                >
+                  <div className="title">
+                    Step<span style={{ paddingRight: "15px" }}></span>5
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  flex: 8,
+                  border: "0px solid green",
+                  paddingLeft: "1rem",
+                  paddingTop: "2rem",
+                  textAlign: "left",
+                }}
+              >
+                <div className="right-head">Brand Development_</div>
+                <div className="right-list">Naming</div>
+                <div className="right-list">Logo</div>
+
+                <div className="right-list">Icon</div>
+
+                <div className="right-list">Colour palette</div>
+                <div className="right-list">Typography</div>
+                <div className="right-list">Graphic language</div>
+                <div className="right-list">Imagery style</div>
+                <div className="right-list">Brand in action</div>
+                <div className="right-list">Guidelines</div>
+                <div className="right-list">Brand book </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="slides">
+            <div className="flex-container">
+              <div style={{ flex: 1, border: "0px solid green" }}>
+                <div
+                  className="title-div"
+                  style={{
+                    display: "flex",
+                    border: "0px solid grey",
+                    height: "95%",
+
+                    paddingTop: "50%",
+                    paddingLeft: "50%",
+                    justifyContent: "center",
+                    border: "0px solid red",
+                  }}
+                >
+                  <div className="title">
+                    Step<span style={{ paddingRight: "15px" }}></span>6
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  flex: 8,
+                  border: "0px solid green",
+                  paddingLeft: "1rem",
+                  paddingTop: "2rem",
+                  textAlign: "left",
+                }}
+              >
+                <div className="right-head">Testing_</div>
+                <div className="right-list">
+                  Customer, employee <br />
+                  or partner interviews
+                </div>
+                <div className="right-list">Questionnaires</div>
+
+                <div className="right-list">Focus groups</div>
+
+                <div className="right-list">User testing</div>
+                <div className="right-list">Mystery shopping</div>
+                <div className="right-list">A/B testing</div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="slides" id="slide7">
+            <div className="flex-container">
+              <div style={{ flex: 1, border: "0px solid green" }}>
+                <div
+                  className="title-div"
+                  style={{
+                    display: "flex",
+                    border: "0px solid grey",
+                    height: "65%",
+
+                    paddingTop: "50%",
+                    paddingLeft: "50%",
+                    justifyContent: "center",
+                    border: "0px solid red",
+                  }}
+                >
+                  <div className="title">
+                    Step<span style={{ paddingRight: "15px" }}></span>7
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  flex: 8,
+                  border: "0px solid green",
+                  paddingLeft: "1rem",
+                  paddingTop: "2rem",
+
+                  textAlign: "left",
+                }}
+              >
+                <div className="right-head">Creative Production_</div>
+                <div className="right-list">Digital design</div>
+                <div className="right-list">Video</div>
+
+                <div className="right-list">Photography</div>
+
+                <div className="right-list">Animation</div>
+                <div className="right-list">Print</div>
+                <div className="right-list">Packaging</div>
+                <div className="right-list">Campaigns</div>
+                <div className="right-list">Marketing</div>
+                <div className="right-list">Internal branding</div>
+                <div className="right-list">Environment branding </div>
+                <div className="right-list">
+                  Social media guidelines & beyond...
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide
+            className="slides"
+            style={{ color: "transparent", backgroundColor: "transparent" }}
+          ></SwiperSlide>{" "}
           <SwiperSlide
             className="slides"
             style={{ color: "transparent", backgroundColor: "transparent" }}
