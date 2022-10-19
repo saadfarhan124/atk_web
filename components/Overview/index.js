@@ -451,7 +451,7 @@ const Overview = () => {
                               <div style={{border:'0px solid white',paddingRight:'10px'}}>
                               Strategy </div>
 
-                              <div style={{border:'1px solid white',width:'50px'}}>
+                              <div style={{border:'1px solid white',width:'5vw'}}>
                               
                               </div>
                             </motion.div>
@@ -533,7 +533,7 @@ const Overview = () => {
                               <div style={{border:'0px solid white',paddingRight:'10px'}}>
                                Creative</div>
 
-                              <div style={{border:'1px solid white',width:'50px'}}>
+                              <div style={{border:'1px solid white',width:'5vw'}}>
                               
                               </div>
                             </motion.div>
@@ -618,7 +618,7 @@ const Overview = () => {
                     <div style={{border:'0px solid white',paddingRight:'10px'}}>
                     campaign</div>
 
-                    <div style={{border:'1px solid white',width:'50px'}}>
+                    <div style={{border:'1px solid white',width:'5vw'}}>
                     
                     </div>
                   </motion.div>
