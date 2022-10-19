@@ -514,3 +514,17 @@ html {
     height: 220px;
   }
 }
+.foo {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  border: 1px solid red;
+}
+.foo:after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  /* top: 50%; */
+  margin-left: 10px;
+  border-top: 3px solid white;
+}
