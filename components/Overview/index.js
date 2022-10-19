@@ -10,9 +10,7 @@ const Title = styled.p`
   font-weight: 500;
   color: white;
   text-align: right;
-  padding-top: 4rem;
-  text-transform: uppercase;
-  padding-right: 3rem;
+  padding-top: 20px;
 `;
 const Description = styled.p`
   width: 40vw;
@@ -41,6 +39,7 @@ const Description = styled.p`
     border: 0px solid red;
   }
   @media (max-width: 862px) {
+  
   }
 `;
 const Container = styled.div`
@@ -84,7 +83,7 @@ const FlexRightDiv = styled.div`
   @media (max-width: 1190px) {
     flex: 1;
   }
-
+  
   @media (max-width: 902px) {
     flex: 1;
   }
@@ -98,6 +97,7 @@ const FlexLeftDiv = styled.div`
   border: 0px solid green;
   position: relative;
   @media (max-width: 876px) {
+
     flex: 1;
   }
   @media (max-width: 769px) {
@@ -117,38 +117,43 @@ const FlexCenter = styled.div`
   }
   @media (max-width: 916px) {
     flex: 4;
-    border: 0px solid red;
+ border: 0px solid red;
   }
   @media (max-width: 860px) {
     flex: 4;
   }
 `;
 
-const LeftTextPara = styled.p`
-  padding-top: 6vw;
-  transform: rotate(-90deg);
-  font-size: 4vw;
-  text-transform: uppercase;
 
-  @media (max-width: 1162px) {
-    padding-top: 15vw;
-    font-size: 5vw;
+
+
+const LeftTextPara = styled.p`
+padding-top: 6vw;
+transform: rotate(-90deg);
+                          font-size: 4vw;
+                          text-transform: uppercase;
+
+                          @media (max-width: 1162px) {
+                            padding-top: 15vw;
+                            font-size: 5vw;
   }
   @media (max-width: 912px) {
-    padding-top: 10vw;
-    font-size: 5vw;
-    padding-right: 10vw;
+                            padding-top: 10vw;
+                            font-size: 5vw;
+                            padding-right: 10vw;
   }
   @media (max-width: 974px) {
-    padding-top: 10vw;
-    font-size: 5vw;
+                            padding-top: 10vw;
+                            font-size: 5vw;
   }
   @media (max-width: 768px) {
-    /* padding-top: 15vw;
+                            /* padding-top: 15vw;
                             padding-right: 10vw; */
-    /* font-size: 5vw; */
+                            /* font-size: 5vw; */
   }
-`;
+
+  
+`
 const Overview = () => {
   const [scroll, setScroll] = useState(0);
   console.log(scroll);
@@ -213,7 +218,7 @@ const Overview = () => {
           </Title>
           <FlexCont>
             <FlexLeftDiv className="vertical__text">
-              {scroll > 63 && scroll < 71 ? (
+              {scroll > 56 && scroll < 71 ? (
                 <motion.p
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -224,7 +229,10 @@ const Overview = () => {
                   }}
                   style={{ transform: "rotate(-90deg)" }}
                 >
-                  <LeftTextPara>Strategy</LeftTextPara>
+                  <LeftTextPara
+                  >
+                    Strategy
+                  </LeftTextPara>
                 </motion.p>
               ) : (
                 <>
@@ -239,7 +247,10 @@ const Overview = () => {
                       }}
                       style={{ transform: "rotate(-90deg)" }}
                     >
-                      <LeftTextPara>Creative</LeftTextPara>
+                      <LeftTextPara
+                      >
+                        Creative
+                      </LeftTextPara>
                     </motion.p>
                   ) : (
                     <>
@@ -254,7 +265,10 @@ const Overview = () => {
                           }}
                           style={{ transform: "rotate(-90deg)" }}
                         >
-                          <LeftTextPara>campaign</LeftTextPara>
+                          <LeftTextPara
+                          >
+                            campaign
+                          </LeftTextPara>
                         </motion.p>
                       ) : null}
                     </>
@@ -265,7 +279,7 @@ const Overview = () => {
             <FlexCenter>
               <Container className="pSection">
                 <ContainerTxt className="pContent">
-                  {scroll > 63 && scroll < 71 ? (
+                  {scroll > 56 && scroll < 71 ? (
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -273,7 +287,7 @@ const Overview = () => {
                       duration={2}
                     >
                       <Description>
-                        1 Verbal brand identity - Brand <br />
+                        Verbal brand identity - Brand <br />
                         audit - Naming - Positioning - <br />
                         Differentiation - Brand
                         <br />
@@ -294,15 +308,11 @@ const Overview = () => {
                           duration={2}
                         >
                           <Description>
-                            2 Verbal brand identity - Brand <br />
-                            audit - Naming - Positioning - <br />
-                            Differentiation - Brand
-                            <br />
-                            architecture - Tone of voice - <br />
-                            Consumer, market, and <br />
-                            competitor research - Insights - <br />
-                            Fieldwork - Focus groups <br />
-                            Testing - Launch plans
+                            Visual brand identity Design <br />
+                            Art direction  - 3D work  <br /> Motion graphics -Film<br /> Copywriting -  Differentiation <br />
+
+                            Photography   <br />
+
                           </Description>
                         </motion.div>
                       ) : (
@@ -315,15 +325,13 @@ const Overview = () => {
                               duration={2}
                             >
                               <Description>
-                                3 Verbal brand identity - Brand <br />
-                                audit - Naming - Positioning - <br />
-                                Differentiation - Brand
+                                The big idea -Launch campaigns
                                 <br />
-                                architecture - Tone of voice - <br />
-                                Consumer, market, and <br />
-                                competitor research - Insights - <br />
-                                Fieldwork - Focus groups <br />
-                                Testing - Launch plans
+                                Amplification campaigns <br />
+                                Channel strategy
+                                <br />
+                                Implementation ideas  <br />
+
                               </Description>
                             </motion.div>
                           ) : null}
@@ -350,7 +358,7 @@ const Overview = () => {
                   paddingRight: "10vw",
                 }}
               >
-                {scroll > 63 && scroll < 71 ? (
+                {scroll > 56 && scroll < 71 ? (
                   <RightText>
                     <motion.p
                       initial={{ scale: 0 }}
