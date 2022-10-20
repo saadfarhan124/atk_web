@@ -213,7 +213,11 @@ html {
   display: flex;
   justify-content: center;
   position: relative;
+
   height: 600vh;
+
+
+
 
   /* background-color: blue; */
   /* background-image: url(../public/static/bs1.png);
@@ -231,6 +235,14 @@ html {
   justify-content: center;
   align-items: "center";
   height: "100vh";
+ 
+
+
+}
+@media only screen and (max-width:479px) {
+  .text1 {
+   display: none;
+  }
 }
 .mySwiper {
   margin-top: 12rem;
@@ -347,7 +359,9 @@ html {
     display: none;
   }
   .containerw {
+ 
     height: 630vh;
+ 
     margin: 0px -2rem !important;
   }
 
