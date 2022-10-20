@@ -170,19 +170,30 @@ const AppContainerTwo = styled.div`
 `;
 
 const GlobalBrand = () => {
-  const [widths, setWidth] = useState(window.innerWidth);
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  const ag = useRef();
+  const ag2 = useRef();
+  const [widths,setWidth]=useState()
+
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
+  if (typeof window !== "undefined") {
+    console.log("ss")
+    console.log(window?.innerWidth)
+  
+  }else{
+    console.log("sds")
+  }
+  
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+ 
   console.log(widths)
-  const ag = useRef();
-  const ag2 = useRef();
+ 
   return (
     <>
     {/* App */}

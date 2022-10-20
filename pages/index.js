@@ -16,14 +16,16 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <Sliderr />
-       <GlobalBrand />
+        <GlobalBrand />
      <BrandStrategy />
-        <Scrolling />
+      
 
-       <Overview />
+        
+           <Scrolling />
+<Overview />
        <div style={{ height: "20vh" }}></div> 
       <Agency />
-       <Footer /> 
+       <Footer />
     </div>
   );
 }
