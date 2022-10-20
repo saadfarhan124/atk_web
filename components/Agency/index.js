@@ -176,7 +176,7 @@ const Agency = () => {
   console.log(widths)
   return (
     <>
-        {/* <Show >
+        <Show >
     <div ref={ag2} >
   
       <AppContainerTwo className="pSection" style={{border:'0px solid white'}}>
@@ -204,7 +204,7 @@ const Agency = () => {
       </AppContainerTwo>
     </div>
 
-    </Show> */}
+    </Show>
 
       <Hide>
       <Container>
