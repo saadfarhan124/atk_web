@@ -10,6 +10,7 @@ import BrandStrategy from "../components/BrandStrategy";
 import Brand from "../components/Brand";
 import Overview from "../components/Overview";
 import Scroll from "../components/Swipers/Scroll";
+import Scrolling from "../components/Swipers/Scrolling";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -17,7 +18,8 @@ export default function Home() {
       <Sliderr />
       <GlobalBrand />
       <BrandStrategy />
-      <Scroll />
+      <Scrolling />
+      {/* <Scroll /> */}
       {/* <Brand /> */}
       <Overview />
       <div style={{ height: "20vh" }}></div>
