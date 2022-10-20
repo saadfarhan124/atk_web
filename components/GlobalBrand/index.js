@@ -44,6 +44,7 @@ const Description = styled.p`
   @media screen and (max-width: 505px) {
     font-size: 3vw;
   }
+
 `;
 const Container = styled.div`
   position: relative;
@@ -80,11 +81,165 @@ const ImgParallax = styled(Parallax)`
   top: 150px !important;
   left: 100px !important;
 `;
+
+const Hide =styled.div`
+@media screen and (max-width: 480px) {
+  display:none;
+}
+`
+const Show =styled.div`
+@media screen and (min-width: 480px) {
+  display:none;
+}
+`
+const ImgsParallaxApp = styled(Parallax)`
+  position: absolute;
+  border:0px solid red;
+  
+  // top: 0px !important;
+  // right: 100px !important;
+`;
+
+
+
+const ContainerTxtApp = styled.div`
+  position: relative;
+ 
+margin-top:5%;
+  margin-right: 40%;
+  margin-bottom:45%;
+  margin-left:40%;
+  @media screen and (max-width: 440px) {
+    margin-left:60%;
+  }
+`;
+const DescApp = styled.p`
+  font-family: "Graphik";
+  font-size: 30pt;
+  font-weight: 400;
+  text-align: left;
+ 
+`;
+const AppContainer = styled.div`
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding:2rem;
+
+`;
+
+
+const AppDescription = styled.p`
+  font-family: "Graphik";
+  font-size: 30pt;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom:80%;
+  margin-top:5rem;
+
+`;
+
+const ImgsParallaxAppTwo = styled(Parallax)`
+  position: absolute;
+  border:0px solid red;
+  margin-bottom:35%;
+  // top: 0px !important;
+  // right: 100px !important;
+
+`;
+
+
+const AppContainerTwo = styled.div`
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  padding:2rem;
+
+
+`;
+
 const GlobalBrand = () => {
   const ag = useRef();
-
+  const ag2 = useRef();
   return (
-    <div ref={ag}>
+    <>
+    {/* App */}
+    <Show>
+    <div ref={ag2} >
+      <AppContainer className="pSection" >
+        <ContainerTxtApp
+          className="pContent"
+          style={{ border:'0px solid white'}}
+        >
+          <Parallax speed={10} >
+            <DescApp style={{border:'0px solid red',width:'400px '}}>
+              We are a global brand and design agency and together we challenge
+              what is now to create what’s next.
+            </DescApp>
+          </Parallax>
+        </ContainerTxtApp>
+       
+        <ImgsParallaxApp speed={-10}>
+          <img
+            // className="pImage"
+            src="/static/global_1.png"
+            width="305px"
+            height="380px"
+          />
+        </ImgsParallaxApp>
+        
+      </AppContainer>
+      
+      <AppContainerTwo className="pSection" style={{border:'0px solid white'}}>
+        <ContainerTxt className="pContent" style={{border:'0px solid white',marginRight:'30%'}}>
+          <Parallax speed={-10}>
+            <AppDescription style={{width:'400px'}}>
+              We work with clients
+              <br /> worldwide and of all
+              <br /> shapes and sizes, so
+              <br /> we’re never held back
+              <br /> by convention or
+              <br /> worried about what
+              <br /> everyone else is doing.
+            </AppDescription>
+          </Parallax>
+        </ContainerTxt>
+        <ImgsParallaxAppTwo speed={10} style={{border:'0px solid orange'}}>
+          <img
+            // className="pImage"
+            src="/static/global_2.png"
+            width="500px"
+            height="400px"
+            style={{paddingRight:'10%',paddingLeft:'2%'}}
+          />
+        </ImgsParallaxAppTwo>
+      </AppContainerTwo>
+    </div>
+
+    </Show>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* Web */}
+
+    <Hide>    
+      <div ref={ag}>
       <Container className="pSection">
         <ContainerTxt
           className="pContent"
@@ -92,7 +247,7 @@ const GlobalBrand = () => {
         >
           <Parallax speed={10}>
             <Desc>
-              We are a global brand and design agency and together we challenge
+            sad  We are a global brand and design agency and together we challenge
               what is now to create what’s next.
             </Desc>
           </Parallax>
@@ -109,7 +264,7 @@ const GlobalBrand = () => {
       <Container className="pSection">
         <ContainerTxt className="pContent" style={{marginRight:'0%'}}>
           <Parallax speed={-10}>
-            <Description>
+            <AppDescription>
               We work with clients
               <br /> worldwide and of all
               <br /> shapes and sizes, so
@@ -117,7 +272,7 @@ const GlobalBrand = () => {
               <br /> by convention or
               <br /> worried about what
               <br /> everyone else is doing.
-            </Description>
+            </AppDescription>
           </Parallax>
         </ContainerTxt>
         <ImgParallax speed={10}>
@@ -130,6 +285,10 @@ const GlobalBrand = () => {
         </ImgParallax>
       </Container>
     </div>
+    </Hide>
+
+
+    </>
   );
 };
 
