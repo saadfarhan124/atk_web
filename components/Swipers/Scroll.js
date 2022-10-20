@@ -9,9 +9,29 @@ gsap.registerPlugin(ScrollTrigger);
 const Scroll = () => {
   const mytext = useRef();
   const myimg = useRef();
+  const section = useRef();
+
   useEffect(() => {
     const text1 = mytext.current;
     const image = myimg.current;
+    const section1 = section.current;
+    gsap.fromTo(
+      section1,
+      { ease: "easeInOut", y: 30 },
+
+      {
+        scrollTrigger: {
+          ease: "easeInOut",
+          y: 30,
+          trigger: section1,
+          onSnapComplete: "",
+          start: "top 50%",
+          end: "bottom 50%",
+          markers: false,
+          toggleActions: "play stop play stop",
+        },
+      }
+    );
     gsap.fromTo(
       text1,
       { y: "0.5vh" },
@@ -38,6 +58,7 @@ const Scroll = () => {
           end: "bottom 30%",
           markers: false,
           toggleActions: "play reset play reverse",
+
           // prpr
         },
       }
@@ -45,8 +66,8 @@ const Scroll = () => {
   }, []);
 
   return (
-    <>
-      <div className="containerw">
+    <div ref={section}>
+      <div className="containerw" ref={section}>
         <div className="text1" ref={mytext}>
           BRAND STRATEGY PROCESS
         </div>
@@ -57,6 +78,7 @@ const Scroll = () => {
           freeMode={true}
           scrollbar={true}
           mousewheel={true}
+          mousewheelReleaseOnEdges={true}
           modules={[FreeMode, Scrollbar, Mousewheel]}
           className="mySwiper"
         >
@@ -385,7 +407,7 @@ const Scroll = () => {
           ></SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 

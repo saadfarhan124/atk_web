@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
 const Title = styled.p`
   font-family: "Graphik";
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 700;
   color: white;
   text-align: right;
