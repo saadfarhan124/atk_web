@@ -1,9 +1,9 @@
-import React,{useRef} from "react";
+import React, { useRef, useLayoutEffect ,useState,useEffect} from "react";
 import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
 const Title = styled.p`
   font-family: "Graphik";
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 700;
   color: white;
   text-align: right;
@@ -119,13 +119,13 @@ const ImgsParallaxApp = styled(Parallax)`
 `;
 const AppDescription = styled.p`
   font-family: "Graphik";
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 400;
   text-align: right;
-  margin-bottom:130%;
+padding-bottom:170%;
   margin-top:5rem;
   margin-left:3rem;
-
+ 
 `;
 const DescApp = styled.p`
   font-family: "Graphik";
@@ -153,10 +153,20 @@ const AppTitle = styled.p`
 `;
 const Agency = () => {
   const ag2 = useRef();
-
+  const [widths, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+  console.log(widths)
   return (
     <>
-        <Show>
+        <Show >
     <div ref={ag2} >
   
       <AppContainerTwo className="pSection" style={{border:'0px solid white'}}>
@@ -164,7 +174,7 @@ const Agency = () => {
           <Parallax speed={-10}>
           <AppTitle>WHY<br/> AGENCY<br/> TK?</AppTitle>
           <div style={{height:'0vh'}}></div>
-            <AppDescription style={{width:'400px'}}>
+            <AppDescription style={{width:widths-90}}>
             Innovation isn’t just a buzzword for us. We put our money where
               our mouth is, from creating world-first app technology to bringing
               a brand new beverage concept to the market. We push, challenge,
@@ -176,7 +186,7 @@ const Agency = () => {
           <img
             // className="pImage"
             src="/static/why_agency.png"
-            width="500px"
+            width={widths-36}
             height="400px"
             style={{paddingRight:'30%',paddingLeft:'2%'}}
           />

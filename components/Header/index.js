@@ -6,10 +6,14 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  
 `;
 const ImgNews = styled.img`
   object-fit: contain;
-  width: 20vw;
+  width: 35vw;
+  @media screen and (max-width: 479px) {
+    width: 50vw;
+  }
 `;
 const Header = () => {
   return (
