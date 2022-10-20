@@ -21,9 +21,9 @@ const Scrolling = () => {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-      } else if (window.scrollY >= 2400 && window.scrollY <= 4430) {
+      } else if (window.scrollY >= 2400 && window.scrollY <= 5630) {
         setShadow(2);
-      } else if (window.scrollY >= 4431) {
+      } else if (window.scrollY >= 5631) {
         setShadow(3);
       }
     }
@@ -33,20 +33,20 @@ const Scrolling = () => {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-      } else if (window.scrollY >= 2600 && window.scrollY <= 5030) {
+      } else if (window.scrollY >= 2600 && window.scrollY <= 5730) {
         setShadow(2);
-      } else if (window.scrollY >= 5031) {
+      } else if (window.scrollY >= 5731) {
         setShadow(3);
       }
     } //Browser View
     else if (window.innerWidth >= 1024) {
-      if (window.scrollY >= 2000 && window.scrollY <= 2899) {
+      if (window.scrollY >= 2300 && window.scrollY <= 2899) {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-      } else if (window.scrollY >= 2900 && window.scrollY <= 5530) {
+      } else if (window.scrollY >= 2900 && window.scrollY <= 6550) {
         setShadow(2);
-      } else if (window.scrollY >= 5531) {
+      } else if (window.scrollY >= 6551) {
         setShadow(3);
       }
     }
@@ -368,9 +368,6 @@ const Scrolling = () => {
               <div className="right-list">Print</div>
               <div className="right-list">Packaging</div>
               <div className="right-list">Campaigns</div>
-              <div className="right-list">Marketing</div>
-              <div className="right-list">Internal branding</div>
-              <div className="right-list">Environment branding </div>
               <div className="right-list">
                 Social media guidelines & beyond...
               </div>
@@ -379,11 +376,21 @@ const Scrolling = () => {
         </div>
         <div
           className="slides"
-          style={{ color: "transparent", backgroundColor: "transparent" }}
+          style={{
+            boxShadow: "none",
+            border: "none",
+            color: "transparent",
+            backgroundColor: "transparent",
+          }}
         ></div>{" "}
         <div
           className="slides"
-          style={{ color: "transparent", backgroundColor: "transparent" }}
+          style={{
+            boxShadow: "none",
+            border: "none",
+            color: "transparent",
+            backgroundColor: "transparent",
+          }}
         ></div>
       </div>
     </div>
