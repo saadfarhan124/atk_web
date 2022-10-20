@@ -153,20 +153,30 @@ const AppTitle = styled.p`
 `;
 const Agency = () => {
   const ag2 = useRef();
-  const [widths, setWidth] = useState(window.innerWidth);
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  const [widths,setWidth]=useState()
+
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
+  if (typeof window !== "undefined") {
+    console.log("ss")
+    console.log(window?.innerWidth)
+  
+  }else{
+    console.log("sds")
+  }
+  
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+ 
   console.log(widths)
   return (
     <>
-        <Show >
+        {/* <Show >
     <div ref={ag2} >
   
       <AppContainerTwo className="pSection" style={{border:'0px solid white'}}>
@@ -194,7 +204,7 @@ const Agency = () => {
       </AppContainerTwo>
     </div>
 
-    </Show>
+    </Show> */}
 
       <Hide>
       <Container>
