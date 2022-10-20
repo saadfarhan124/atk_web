@@ -213,7 +213,7 @@ html {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 498vh;
+  height: 600vh;
 
   /* background-color: blue; */
   /* background-image: url(../public/static/bs1.png);
@@ -234,7 +234,7 @@ html {
 }
 .mySwiper {
   margin-top: 12rem;
-  height: fit-content !important;
+  height: 100vh !important;
   width: 100%;
   background-color: transparent !important;
   position: absolute !important;
@@ -242,8 +242,10 @@ html {
 
 .slides {
   /* height: 55vh !important; */
+  box-shadow: #fff 0px 4px 2px, #fff 0px 8px 4px, #fff 0px 8px 9px;
+
   padding: 2rem;
-  min-height: fit-content !important;
+  min-height: 70vh !important;
   width: 50% !important;
   transition: transform 0.5s ease;
   margin-left: auto;
@@ -341,10 +343,14 @@ html {
 }
 /* mobile view */
 @media screen and (max-width: 767px) {
+  scrollbar {
+    display: none;
+  }
   .containerw {
-    height: 410vh;
+    height: 630vh;
     margin: 0px -2rem !important;
   }
+
   .flex-container {
     display: flex;
     flex-direction: column;
@@ -356,6 +362,7 @@ html {
   }
   .slides {
     /* height: 55vh !important; */
+    box-shadow: #fff 0px 4px 2px, #fff 0px 8px 4px, #fff 0px 8px 9px;
     height: fit-content !important;
     overflow: visible;
     width: 100% !important;
@@ -434,7 +441,7 @@ html {
     /* height: 55vh !important; */
     height: fit-content !important;
     overflow: visible;
-    width: 45% !important;
+    width: 50% !important;
     margin-left: auto;
     margin-right: auto;
     font-size: 8rem;

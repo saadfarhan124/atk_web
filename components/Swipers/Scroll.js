@@ -403,7 +403,11 @@ const Scroll = () => {
           ></SwiperSlide>{" "}
           <SwiperSlide
             className="slides"
-            style={{ color: "transparent", backgroundColor: "transparent" }}
+            style={{
+              border: "none",
+              color: "transparent",
+              backgroundColor: "transparent",
+            }}
           ></SwiperSlide>
         </Swiper>
       </div>
