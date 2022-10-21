@@ -530,13 +530,37 @@ html {
   width: 100%;
   position: sticky;
 }
+
+.shadowhide {
+  display: none;
+}
+
 .shadow {
   position: fixed;
+  -webkit-animation: moving 1s both;
+  animation: moving 1s both;
   width: 100%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.shadowhide {
-  display: none;
+
+@-webkit-keyframes moving {
+  from {
+    top: 0px;
+  }
+  to {
+    left: 50%;
+    top: 50%;
+  }
+}
+
+@keyframes moving {
+  from {
+    top: 0px;
+  }
+  to {
+    left: 50%;
+    top: 50%;
+  }
 }
