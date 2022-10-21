@@ -53,7 +53,7 @@ const Scrolling = () => {
   };
   console.log("Number" + shadow);
   return (
-    <div className="containerw">
+    <div className="containerw" >
       <div
         className={`${shadow === 1 && "sticky"} ${shadow === 2 && "shadow"} ${
           shadow === 3 && "shadowhide"

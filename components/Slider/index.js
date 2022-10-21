@@ -27,7 +27,7 @@ const Slide = styled.div`
 `;
 const Type = styled.div`
   height: 80vh;
-  width: 96vw;
+  // width: 100vw;
   background-size: auto 80vh;
   background-repeat: repeat-x;
   animation-name: ${Marquee};
@@ -39,7 +39,7 @@ const Mytext = styled.div`
   display: block;
   position: absolute;
   text-align: center;
-  top: 48%;
+  top:48%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -51,6 +51,14 @@ const Mytext = styled.div`
   font-weight: bolder;
   color: white;
   overflow-x: hidden;
+  @media (max-width: 479px) {
+    font-size: 15vw;
+ 
+    margin-bottom:50%;
+    height:30vh
+    
+  }
+
 `;
 
 const Sliderr = () => {
@@ -59,7 +67,10 @@ const Sliderr = () => {
       <Slide>
         <Type></Type>
       </Slide>
+
+      
       <Mytext>Create positive change</Mytext>
+     
     </Parent>
   );
 };
