@@ -147,22 +147,30 @@ const AppDescription = styled.div`
   margin-bottom:150%;
   margin-top:5rem;
   padding-right:1rem;
-  @media screen and (max-width: 423px) {
-    font-size: 16pt;
+  @media screen and (max-width: 483px) {
+    margin-top:100%;
+    font-size: 20pt;
+    width:400px;
+    border:1px solid white;
+    width:width -190
   }
 
 `;
 const WebDes = styled.div`
-  font-family: "Graphik";
+  // font-family: "Graphik";
   font-size: 36pt;
-    font-weight: 400;
-  text-align: right;
-  margin-bottom:150%;
+  letter-spacing: 0px;
+  
+    text-align: right;
+  // margin-bottom:150%;
   margin-top:15rem;
-  padding-right:1rem;
-  @media screen and (max-width: 423px) {
-    font-size: 16pt;
+  padding-right:1rem;  
+  @media screen and (max-width: 768px) {
+    border:1px solid red;
+    width:450px;
+    font-size:30pt;
   }
+
 
 `;
 
@@ -215,6 +223,63 @@ const GlobalBrand = () => {
 
   return (
     <>
+
+    
+
+
+      {/* Web */}
+
+      <Hide>
+        <div ref={ag}>
+          <Container className="pSection">
+            <ContainerTxt
+              className="pContent"
+              style={{ marginLeft: "5%", marginRight: "30%" }}
+            >
+              <Parallax speed={15}>
+                <Desc>
+                  We are a global brand and design agency and together we challenge
+                  what is now to create what’s next.
+                </Desc>
+              </Parallax>
+            </ContainerTxt>
+            <ImgsParallax speed={-15} >
+              <img
+                className="pImage"
+                src="/static/global_1.png"
+                width="305px"
+                height="380px"
+                style={{marginTop:100}}
+              />
+            </ImgsParallax>
+          </Container>
+          <Container className="pSection" style={{marginTop:"20rem"}}>
+            <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
+              <Parallax speed={-20} >
+                <WebDes >
+                  We work with clients
+                  <br /> worldwide and of all
+                  <br /> shapes and sizes, so
+                  <br /> we’re never held back
+                  <br /> by convention or
+                  <br /> worried about what
+                  <br /> everyone else is doing.
+                </WebDes>
+              </Parallax>
+            </ContainerTxt>
+            <ImgParallax speed={20}>
+              <img
+                className="pImage"
+                src="/static/global_2.png"
+                width="305px"
+                height="380px"
+              />
+            </ImgParallax>
+          </Container>
+        </div>
+      </Hide>
+
+
       {/* App */}
       <Show>
         <div ref={ag2} >
@@ -245,7 +310,7 @@ const GlobalBrand = () => {
           <AppContainerTwo className="pSection" style={{ border: '0px solid red' }}>
             <ContainerTxt className="pContent" style={{ border: '0px solid white', width: widths }}>
               <Parallax speed={-10} >
-                <AppDescription style={{ border: '0px solid white', width: widths - 190 }}>
+                <AppDescription>
                   We work with clients
                   <br /> worldwide and of all
                   <br /> shapes and sizes, so
@@ -278,61 +343,6 @@ const GlobalBrand = () => {
 
 
 
-
-
-
-
-      {/* Web */}
-
-      <Hide>
-        <div ref={ag}>
-          <Container className="pSection">
-            <ContainerTxt
-              className="pContent"
-              style={{ marginLeft: "5%", marginRight: "30%" }}
-            >
-              <Parallax speed={20}>
-                <Desc>
-                  We are a global brand and design agency and together we challenge
-                  what is now to create what’s next.
-                </Desc>
-              </Parallax>
-            </ContainerTxt>
-            <ImgsParallax speed={-20} >
-              <img
-                className="pImage"
-                src="/static/global_1.png"
-                width="305px"
-                height="380px"
-                style={{marginTop:100}}
-              />
-            </ImgsParallax>
-          </Container>
-          <Container className="pSection" style={{marginTop:150}}>
-            <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
-              <Parallax speed={-20} >
-                <WebDes >
-                  We work with clients
-                  <br /> worldwide and of all
-                  <br /> shapes and sizes, so
-                  <br /> we’re never held back
-                  <br /> by convention or
-                  <br /> worried about what
-                  <br /> everyone else is doing.
-                </WebDes>
-              </Parallax>
-            </ContainerTxt>
-            <ImgParallax speed={20}>
-              <img
-                className="pImage"
-                src="/static/global_2.png"
-                width="305px"
-                height="380px"
-              />
-            </ImgParallax>
-          </Container>
-        </div>
-      </Hide>
 
 
     </>

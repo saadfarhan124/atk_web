@@ -16,16 +16,16 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <Sliderr />
-        <GlobalBrand />
-     <BrandStrategy />
-      
+      <GlobalBrand />
+     <div style={{marginTop:'20rem'}}></div>
+      <BrandStrategy />
+{/* 
 
-        
-           <Scrolling />
-<Overview />
-       <div style={{ height: "20vh" }}></div> 
+      <Scrolling />
+      <Overview />
+      <div style={{ height: "20vh" }}></div>
       <Agency />
-       <Footer />
+      <Footer /> */}
     </div>
   );
 }
