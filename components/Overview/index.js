@@ -364,7 +364,7 @@ const Overview = () => {
           </Title>
           <FlexCont>
             <FlexLeftDiv className="vertical__text">
-              {scroll > 56 && scroll < 71 ? (
+              {scroll > 56 && scroll <= 72 ? (
                 <motion.p
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -382,7 +382,7 @@ const Overview = () => {
                 </motion.p>
               ) : (
                 <>
-                  {scroll > 72 && scroll < 79 ? (
+                  {scroll > 72 && scroll <= 80 ? (
                     <motion.p
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -425,7 +425,7 @@ const Overview = () => {
             <FlexCenter>
               <Container className="pSection">
                 <ContainerTxt className="pContent">
-                  {scroll > 56 && scroll < 71 ? (
+                  {scroll > 56 && scroll <= 72 ? (
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -446,7 +446,7 @@ const Overview = () => {
                     </motion.div>
                   ) : (
                     <>
-                      {scroll > 72 && scroll < 79 ? (
+                      {scroll > 72 && scroll <= 80 ? (
                         <motion.div
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
@@ -502,7 +502,7 @@ const Overview = () => {
                   paddingRight: "10vw",
                 }}
               >
-                {scroll > 56 && scroll < 71 ? (
+                {scroll > 56 && scroll <=72 ? (
                   <RightText>
                    <motion.div
                               initial={{ scale: 0 }}
@@ -565,7 +565,7 @@ const Overview = () => {
                   </RightText>
                 ) : (
                   <>
-                    {scroll > 72 && scroll < 79 ? (
+                    {scroll > 72 && scroll <= 80 ? (
                       <>
                           <RightText>
                   
