@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import Image from "next/image";
-import React, { useRef, useLayoutEffect ,useState,useEffect} from "react";
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
 import ParallaxItem from "../Paralex";
@@ -15,18 +15,25 @@ const Title = styled.p`
 
 const Desc = styled.p`
   font-family: "Graphik";
-  font-size: 56pt;
+  font-size: 50pt;
   font-weight: 400;
   text-align: left;
-  @media screen and (max-width: 1029px) {
-    font-size: 3vw;
+
+  @media screen and (max-width: 1160px) {
+    font-size: 45pt;
+
   }
-  @media screen and (max-width: 748px) {
-    font-size: 3vw;
+  @media screen and (max-width: 1029px) {
+    font-size: 40pt;
+  }
+  @media screen and (max-width: 768px) {
+    font-size:33pt;
   }
   @media screen and (max-width: 505px) {
-    font-size: 3vw;
+    font-size: 25pt;
+    
   }
+  
 `;
 
 const Description = styled.p`
@@ -82,19 +89,18 @@ const ImgParallax = styled(Parallax)`
   left: 100px !important;
 `;
 
-const Hide =styled.div`
+const Hide = styled.div`
 @media screen and (max-width: 480px) {
   display:none;
 }
 `
-const Show =styled.div`
+const Show = styled.div`
 @media screen and (min-width: 480px) {
   display:none;
 }
 `
 const ImgsParallaxApp = styled(Parallax)`
   position: absolute;
-  border:0px solid red;
   
   // top: 0px !important;
   // right: 100px !important;
@@ -115,7 +121,7 @@ margin-top:5%;
 `;
 const DescApp = styled.p`
   font-family: "Graphik";
-  font-size: 18pt;
+  font-size: 25pt;
   font-weight: 400;
   text-align: left;
   
@@ -140,6 +146,19 @@ const AppDescription = styled.div`
   text-align: right;
   margin-bottom:150%;
   margin-top:5rem;
+  padding-right:1rem;
+  @media screen and (max-width: 423px) {
+    font-size: 16pt;
+  }
+
+`;
+const WebDes = styled.div`
+  font-family: "Graphik";
+  font-size: 36pt;
+    font-weight: 400;
+  text-align: right;
+  margin-bottom:150%;
+  margin-top:15rem;
   padding-right:1rem;
   @media screen and (max-width: 423px) {
     font-size: 16pt;
@@ -172,7 +191,7 @@ const AppContainerTwo = styled.div`
 const GlobalBrand = () => {
   const ag = useRef();
   const ag2 = useRef();
-  const [widths,setWidth]=useState()
+  const [widths, setWidth] = useState()
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
@@ -183,75 +202,73 @@ const GlobalBrand = () => {
   if (typeof window !== "undefined") {
     console.log("ss")
     console.log(window?.innerWidth)
-  
-  }else{
+
+  } else {
     console.log("sds")
   }
-  
+
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
- 
+
   console.log(widths)
- 
+
   return (
     <>
-    {/* App */}
-    <Show>
-    <div ref={ag2} >
-      <AppContainer className="pSection" >
-        <ContainerTxtApp
-          className="pContent"
-          style={{ border:'0px solid white'}}
-        >
-          <Parallax speed={10} >
-            <DescApp style={{border:'0px solid red',width:widths-68}}>
-              We are a global brand and design agency and together we challenge
-              what is now to create what’s next.
-            </DescApp>
-          </Parallax>
-        </ContainerTxtApp>
-       
-        <ImgsParallaxApp speed={-10}>
-          <img
-            // className="pImage"
-            src="/static/global_1.png"
-            width="305px"
-            height="380px"
-          />
-        </ImgsParallaxApp>
-        
-      </AppContainer>
-      
-     <AppContainerTwo className="pSection" style={{border:'0px solid red'}}>
-        <ContainerTxt className="pContent" style={{border:'0px solid white',width:widths}}>
-          <Parallax speed={-10} >
-            <AppDescription style={{border:'0px solid white',width:widths-190}}>
-              We work with clients
-              <br /> worldwide and of all
-              <br /> shapes and sizes, so
-              <br /> we’re never held back
-              <br /> by convention or
-              <br /> worried about what
-              <br /> everyone else is doing.
-            </AppDescription>
-          </Parallax>
-        </ContainerTxt>
-        <ImgsParallaxAppTwo speed={10} >
-          <img
-            // className="pImage"
-            src="/static/global_2.png"
-            width={widths-10}
-            height="400px"
-            style={{paddingRight:'10%',paddingLeft:'0%'}}
-          />
-        </ImgsParallaxAppTwo>
-      </AppContainerTwo>
-    </div>
+      {/* App */}
+      <Show>
+        <div ref={ag2} >
+          <AppContainer className="pSection" >
+            <ContainerTxtApp
+              className="pContent"
+              style={{ border: '0px solid white' }}
+            >
+              <Parallax speed={10} >
+                <DescApp style={{ border: '0px solid red', width: widths - 68 }}>
+                  We are a global brand and design agency and together we challenge
+                  what is now to create what’s next.
+                </DescApp>
+              </Parallax>
+            </ContainerTxtApp>
 
-    </Show>
+            <ImgsParallaxApp speed={-10}>
+              <img
+                // className="pImage"
+                src="/static/global_1.png"
+                width="305px"
+                height="380px"
+              />
+            </ImgsParallaxApp>
 
+          </AppContainer>
 
+          <AppContainerTwo className="pSection" style={{ border: '0px solid red' }}>
+            <ContainerTxt className="pContent" style={{ border: '0px solid white', width: widths }}>
+              <Parallax speed={-10} >
+                <AppDescription style={{ border: '0px solid white', width: widths - 190 }}>
+                  We work with clients
+                  <br /> worldwide and of all
+                  <br /> shapes and sizes, so
+                  <br /> we’re never held back
+                  <br /> by convention or
+                  <br /> worried about what
+                  <br /> everyone else is doing.
+                </AppDescription>
+              </Parallax>
+            </ContainerTxt>
+            <ImgsParallaxAppTwo speed={10} >
+              <img
+                // className="pImage"
+                src="/static/global_2.png"
+                width={widths - 10}
+                height="400px"
+                style={{ paddingRight: '10%', paddingLeft: '0%' }}
+              />
+            </ImgsParallaxAppTwo>
+          </AppContainerTwo>
+        </div>
+
+      </Show>
 
 
 
@@ -263,56 +280,59 @@ const GlobalBrand = () => {
 
 
 
-        {/* Web */}
 
-    <Hide>    
-      <div ref={ag}>
-      <Container className="pSection">
-        <ContainerTxt
-          className="pContent"
-          style={{ marginLeft: "5%", marginRight: "30%" }}
-        >
-          <Parallax speed={10}>
-            <Desc>
-            We are a global brand and design agency and together we challenge
-              what is now to create what’s next.
-            </Desc>
-          </Parallax>
-        </ContainerTxt>
-        <ImgsParallax speed={-10}>
-          <img
-            className="pImage"
-            src="/static/global_1.png"
-            width="305px"
-            height="380px"
-          />
-        </ImgsParallax>
-      </Container>
-      <Container className="pSection">
-        <ContainerTxt className="pContent" style={{marginRight:'0%'}}>
-          <Parallax speed={-10}>
-            <AppDescription>
-              We work with clients
-              <br /> worldwide and of all
-              <br /> shapes and sizes, so
-              <br /> we’re never held back
-              <br /> by convention or
-              <br /> worried about what
-              <br /> everyone else is doing.
-            </AppDescription>
-          </Parallax>
-        </ContainerTxt>
-        <ImgParallax speed={10}>
-          <img
-            className="pImage"
-            src="/static/global_2.png"
-            width="305px"
-            height="380px"
-          />
-        </ImgParallax>
-      </Container>
-    </div>
-    </Hide>
+
+      {/* Web */}
+
+      <Hide>
+        <div ref={ag}>
+          <Container className="pSection">
+            <ContainerTxt
+              className="pContent"
+              style={{ marginLeft: "5%", marginRight: "30%" }}
+            >
+              <Parallax speed={20}>
+                <Desc>
+                  We are a global brand and design agency and together we challenge
+                  what is now to create what’s next.
+                </Desc>
+              </Parallax>
+            </ContainerTxt>
+            <ImgsParallax speed={-20} >
+              <img
+                className="pImage"
+                src="/static/global_1.png"
+                width="305px"
+                height="380px"
+                style={{marginTop:100}}
+              />
+            </ImgsParallax>
+          </Container>
+          <Container className="pSection" style={{marginTop:150}}>
+            <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
+              <Parallax speed={-20} >
+                <WebDes >
+                  We work with clients
+                  <br /> worldwide and of all
+                  <br /> shapes and sizes, so
+                  <br /> we’re never held back
+                  <br /> by convention or
+                  <br /> worried about what
+                  <br /> everyone else is doing.
+                </WebDes>
+              </Parallax>
+            </ContainerTxt>
+            <ImgParallax speed={20}>
+              <img
+                className="pImage"
+                src="/static/global_2.png"
+                width="305px"
+                height="380px"
+              />
+            </ImgParallax>
+          </Container>
+        </div>
+      </Hide>
 
 
     </>
