@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-
+import styled from "styled-components";
+const mySwiper = styled.div`
+margin-top: 12rem;
+height: 100vh !important;
+width: 100%;
+background-color: transparent !important;
+position: absolute !important;
+`
 const Scrolling = () => {
   const [shadow, setShadow] = useState(3);
-  const [flag,setFlag]=useState(false)
+  const [flag, setFlag] = useState(false)
   useEffect(() => {
     document.addEventListener("scroll", checkScroll);
     return () => document.removeEventListener("scroll", checkScroll);
@@ -35,11 +42,11 @@ const Scrolling = () => {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-        console.log("shadow",shadow)
+        console.log("shadow", shadow)
       } else if (window.scrollY >= 2811 && window.scrollY <= 5730) {
         console.log("here")
         setShadow(2);
-        console.log("shadow",shadow)
+        console.log("shadow", shadow)
 
       } else if (window.scrollY >= 5731) {
         setShadow(3);
@@ -50,7 +57,7 @@ const Scrolling = () => {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-        
+
       } else if (window.scrollY >= 3125 && window.scrollY <= 6550) {
         setShadow(2);
       } else if (window.scrollY >= 6551) {
@@ -60,21 +67,45 @@ const Scrolling = () => {
   };
   console.log("Number" + shadow);
   return (
-    <div className="containerw" style={{border:'0px solid red'}}>
+    <div className="containerw" style={{ border: '0px solid red' }}>
       <div
-        className={`${shadow === 1 && "sticky"} ${shadow === 2 && "shadow"} ${
-          shadow === 3 && "shadowhide"
-        }`}
+        className={`${shadow === 1 && "sticky"} ${shadow === 2 && "shadow"} ${shadow === 3 && "shadowhide"
+          }`}
         id="bar"
       >
         {/* {window.screenY >= } */}
-        
+
         <h1 className="text1">BRAND STRATEGY PROCESS</h1>
       </div>
       <div className="mySwiper" >
         <div className="slides">
           <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
+            <div>
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                <div style={{ flex: 1, border: '1px solid green'}}>
+                  <div className="title">
+                    Step<span style={{ paddingRight: "5px" }}></span>1
+                  </div>
+                </div>
+                <div style={{ flex: 2, border: '1px solid green',width:'400px' }}>
+                  <div>
+                    <div className="right-head">
+                      Immerse & <br /> Research_
+                    </div>
+
+                    <div className="right-list">Brand immersion</div>
+                    <div className="right-list">Brand audit</div>
+
+                    <div className="right-list">Market research</div>
+
+                    <div className="right-list">Competitor analysis</div>
+                    <div className="right-list">Audience analysis</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            {/* <div style={{ flex: 1,border:'1px solid black' }}>
               <div
                 className="title-div"
                 style={{
@@ -91,8 +122,8 @@ const Scrolling = () => {
                   Step<span style={{ paddingRight: "5px" }}></span>1
                 </div>
               </div>
-            </div>
-            <div
+            </div> */}
+            {/* <div
               style={{
                 flex: 8,
                 border: "0px solid green",
@@ -112,7 +143,7 @@ const Scrolling = () => {
 
               <div className="right-list">Competitor analysis</div>
               <div className="right-list">Audience analysis</div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="slides">

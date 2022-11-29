@@ -5,6 +5,80 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+.mySwiper {
+  margin-top: 12rem;
+  /* height: 100vh !important; */
+  width: 100%;
+  background-color: transparent !important;
+  position: absolute !important;
+  border: 1px solid white;
+}
+.slides {
+  box-shadow: #fff 0px 4px 2px, #fff 0px 8px 4px, #fff 0px 8px 9px;
+  padding: 2rem;
+  min-height: 70vh !important;
+  width: 60% !important;
+  transition: transform 0.5s ease;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  color: black;
+  text-align: center; 
+}
+.slides:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  /* padding-right: 7%; */
+  color: black;
+  font-size: 40pt;
+  transform-origin: 0 50%;
+  transform: rotate(-90deg) translate(-50%, 50%);
+  -webkit-transform-origin: 0 50%;
+  font-weight: 600;
+}
+.title::after {
+  content: "";
+  display: inline-block;
+  height: 70vh;
+  vertical-align: bottom;
+  width: 100%;
+  /* margin-right: -100%; */
+  /* margin-left: 10px; */
+  border-top: 6px solid black;
+}
+.right-head {
+  font-size: 30pt;
+  /* margin: -10px; */
+  font-weight: 500;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+
+.right-list {
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0.25rem;
+  text-align: left;
+}
+
+
+
+
+
 
 a {
   color: inherit;
@@ -261,34 +335,9 @@ html {
    display: none;
   }
 }
-.mySwiper {
-  margin-top: 12rem;
-  height: 100vh !important;
-  width: 100%;
-  background-color: transparent !important;
-  position: absolute !important;
-}
 
-.slides {
-  /* height: 55vh !important; */
-  box-shadow: #fff 0px 4px 2px, #fff 0px 8px 4px, #fff 0px 8px 9px;
 
-  padding: 2rem;
-  min-height: 70vh !important;
-  width: 50% !important;
-  transition: transform 0.5s ease;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 8rem;
-  margin-bottom: 5rem;
-  background-color: white;
-  color: black;
-  text-align: center; /* Animation */
-}
-.slides:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
+
 .slides4 {
   height: 60vh !important;
   width: 40% !important;
@@ -320,44 +369,11 @@ html {
   height: 50vh;
   background-color: #00026d !important;
 }
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  border: 0px solid red;
-  min-height: 100px;
-}
-.title {
-  padding-right: 30px;
-  color: black;
-  font-size: 40pt;
-  transform-origin: 0 50%;
-  transform: rotate(-90deg) translate(-50%, 50%);
-  -webkit-transform-origin: 0 50%;
-  font-weight: 600;
-}
-.title::after {
-  content: "";
-  display: inline-block;
-  height: 0.3em;
-  vertical-align: bottom;
-  width: 90px;
-  margin-right: -100%;
-  margin-left: 10px;
-  border-top: 6px solid black;
-}
-.right-head {
-  font-size: 32pt;
-  margin: -10px;
-  font-weight: 500;
-  color: black;
-  padding-bottom: 1rem;
-}
 
-.right-list {
-  font-size: 14pt;
-  font-weight: bold;
-  padding: 0.25rem;
-}
+
+
+
+
 #slide4 {
   height: fit-content !important;
   overflow: visible;
@@ -382,30 +398,11 @@ html {
     margin: 0px -2rem !important;
   }
 
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    border: 0px solid red;
-    min-height: 100px;
-  }
+  
   .text1 {
     font-size: 6vw;
   }
-  .slides {
-    /* height: 55vh !important; */
-    box-shadow: #fff 0px 4px 2px, #fff 0px 8px 4px, #fff 0px 8px 9px;
-    height: fit-content !important;
-    overflow: visible;
-    width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 8rem;
-    margin-bottom: 3rem;
-    background-color: white;
-    color: black;
-    text-align: center; /* Animation */
-    padding-bottom: 10px;
-  }
+ 
   #slide4 {
     height: fit-content !important;
     overflow: visible;
@@ -418,69 +415,18 @@ html {
     height: fit-content !important;
     overflow: visible;
   }
-  .title {
-    text-transform: uppercase;
-    margin-left: -201px;
-    margin-top: -50px;
-    min-height: 1px;
-    color: black;
-    font-size: 17pt;
-    transform-origin: 0 50%;
-    transform: rotate(-360deg) translate(-50%, 50%);
-    -webkit-transform-origin: 0 50%;
-    font-weight: 800;
-  }
-  .title::after {
-    content: "";
-    display: inline-block;
-    height: 0.5em;
-    vertical-align: bottom;
-    width: 40px;
-    margin-right: -100%;
-    margin-left: 5px;
-    border-top: 3px solid black;
-  }
+ 
   .title-div {
     height: 20% !important;
     padding-top: 10px !important;
   }
-  .right-head {
-    font-size: 13pt;
+  
 
-    font-weight: 700;
-    color: black;
-    padding-bottom: 1rem;
-  }
-
-  .right-list {
-    font-size: 9pt;
-    font-weight: bold;
-    padding: 0.25rem;
-  }
 }
 @media screen and (min-width: 760px) and (max-width: 1023px) {
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    border: 0px solid red;
-    min-height: 100px;
-  }
+  
   .text1 {
     font-size: 3rem;
-  }
-  .slides {
-    /* height: 55vh !important; */
-    height: fit-content !important;
-    overflow: visible;
-    width: 50% !important;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 8rem;
-    margin-bottom: 4rem;
-    background-color: white;
-    color: black;
-    text-align: center; /* Animation */
-    padding-bottom: 10px;
   }
   #slide4 {
     height: fit-content !important;
@@ -494,45 +440,14 @@ html {
     height: fit-content !important;
     overflow: visible;
   }
-  .title {
-    min-height: 1px;
-    color: black;
-    font-size: 15pt;
-    transform-origin: 0 50%;
-    transform: rotate(-360deg) translate(-50%, 50%);
-    -webkit-transform-origin: 0 50%;
-    font-weight: 600;
-    padding-top: -60% !important;
-    padding-right: 5rem !important;
-  }
-  .title::after {
-    content: "";
-    display: inline-block;
-    height: 0.5em;
-    vertical-align: bottom;
-    width: 30px;
-    margin-right: -100%;
-    margin-left: 10px;
-    border-top: 6px solid black;
-  }
+ 
   .title-div {
     height: 20% !important;
     padding-top: 10px !important;
     padding-left: -50%;
   }
-  .right-head {
-    font-size: 12pt;
+  
 
-    font-weight: 500;
-    color: black;
-    padding-bottom: 1rem;
-  }
-
-  .right-list {
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 0.25rem;
-  }
 }
 
 @media screen and (max-width: 1029px) {
