@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Scrolling = () => {
   const [shadow, setShadow] = useState(3);
-
+  const [flag,setFlag]=useState(false)
   useEffect(() => {
     document.addEventListener("scroll", checkScroll);
     return () => document.removeEventListener("scroll", checkScroll);
@@ -17,11 +17,12 @@ const Scrolling = () => {
     // why loging these two? you gonna see
     //Mobile View
     if (window.innerWidth <= 767) {
-      if (window.scrollY >= 2000 && window.scrollY <= 2399) {
+      if (window.scrollY >= 2000 && window.scrollY <= 2735) {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
+        setFlag(true)
         setShadow(1);
-      } else if (window.scrollY >= 2400 && window.scrollY <= 5630) {
+      } else if (window.scrollY >= 2736 && window.scrollY <= 5630) {
         setShadow(2);
       } else if (window.scrollY >= 5631) {
         setShadow(3);
@@ -29,22 +30,28 @@ const Scrolling = () => {
     }
     //Tab View
     else if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
-      if (window.scrollY >= 2100 && window.scrollY <= 2599) {
+      if (window.scrollY >= 2100 && window.scrollY <= 2810) {
+        console.log("--")
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-      } else if (window.scrollY >= 2600 && window.scrollY <= 5730) {
+        console.log("shadow",shadow)
+      } else if (window.scrollY >= 2811 && window.scrollY <= 5730) {
+        console.log("here")
         setShadow(2);
+        console.log("shadow",shadow)
+
       } else if (window.scrollY >= 5731) {
         setShadow(3);
       }
     } //Browser View
     else if (window.innerWidth >= 1024) {
-      if (window.scrollY >= 2300 && window.scrollY <= 2899) {
+      if (window.scrollY >= 2300 && window.scrollY <= 3124) {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
-      } else if (window.scrollY >= 2900 && window.scrollY <= 6550) {
+        
+      } else if (window.scrollY >= 3125 && window.scrollY <= 6550) {
         setShadow(2);
       } else if (window.scrollY >= 6551) {
         setShadow(3);
@@ -53,16 +60,18 @@ const Scrolling = () => {
   };
   console.log("Number" + shadow);
   return (
-    <div className="containerw" >
+    <div className="containerw" style={{border:'0px solid red'}}>
       <div
         className={`${shadow === 1 && "sticky"} ${shadow === 2 && "shadow"} ${
           shadow === 3 && "shadowhide"
         }`}
         id="bar"
       >
+        {/* {window.screenY >= } */}
+        
         <h1 className="text1">BRAND STRATEGY PROCESS</h1>
       </div>
-      <div className="mySwiper">
+      <div className="mySwiper" >
         <div className="slides">
           <div className="flex-container">
             <div style={{ flex: 1, border: "0px solid green" }}>

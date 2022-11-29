@@ -214,7 +214,7 @@ html {
   justify-content: center;
   position: relative;
 
-  height: 600vh;
+  height: 640vh;
 
 
 
@@ -227,8 +227,9 @@ html {
 .text1 {
   overflow-x: hidden;
   overflow-y: hidden;
+  /* border: 1px solid red; */
   color: white;
-  font-size: 5.5rem;
+  font-size: 12vh;
   font-style: italic;
   text-align: center;
   display: flex;
@@ -239,6 +240,22 @@ html {
 
 
 }
+@media only screen and (max-width:1819px) {
+  .text1 {
+    font-size: 12vh;
+  }
+}
+@media only screen and (max-width:1360px) {
+  .text1 {
+    font-size: 10vh;
+  }
+}
+@media only screen and (max-width:1100px) {
+  .text1 {
+    font-size: 8vh;
+  }
+}
+
 @media only screen and (max-width:479px) {
   .text1 {
    display: none;
@@ -372,7 +389,7 @@ html {
     min-height: 100px;
   }
   .text1 {
-    font-size: 1rem;
+    font-size: 6vw;
   }
   .slides {
     /* height: 55vh !important; */
@@ -551,8 +568,8 @@ html {
 
 .shadow {
   position: fixed;
-  -webkit-animation: moving 1s both;
-  animation: moving 1s both;
+  /* -webkit-animation: moving 1s both;
+  animation: moving 1s both; */
   width: 100%;
   left: 50%;
   top: 50%;
