@@ -6,6 +6,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  @media screen and (max-width: 480px) {
+    padding:0.5rem;
+  }
   
 `;
 const ImgNews = styled.img`

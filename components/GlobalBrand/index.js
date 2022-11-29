@@ -70,14 +70,7 @@ const Container = styled.div`
     padding-block: 12rem;
   }
 `;
-const ContainerTxt = styled.div`
-  position: relative;
 
-  margin-left: 40%;
-  
-  /* padding-left: 25%;
-  padding-right: 10%; */
-`;
 const ImgsParallax = styled(Parallax)`
   position: absolute;
   top: 150px !important;
@@ -95,6 +88,7 @@ const Hide = styled.div`
 }
 `
 const Show = styled.div`
+margin-top:10rem;
 @media screen and (min-width: 480px) {
   display:none;
 }
@@ -121,10 +115,12 @@ margin-top:5%;
 `;
 const DescApp = styled.p`
   font-family: "Graphik";
-  font-size: 25pt;
+  font-size: 22pt;
   font-weight: 400;
   text-align: left;
-  
+  padding:2rem;
+  margin-left: 10%;
+  margin-right:15%;
  
 `;
 const AppContainer = styled.div`
@@ -146,32 +142,34 @@ const AppDescription = styled.div`
   text-align: right;
   margin-bottom:150%;
   margin-top:5rem;
-  padding-right:1rem;
+  padding-right:5rem;
   @media screen and (max-width: 483px) {
     margin-top:100%;
     font-size: 20pt;
     width:400px;
-    border:1px solid white;
     width:width -190
   }
+  
 
 `;
 const WebDes = styled.div`
-  // font-family: "Graphik";
+  font-family: "Graphik";
   font-size: 36pt;
   letter-spacing: 0px;
   
     text-align: right;
   // margin-bottom:150%;
   margin-top:15rem;
-  padding-right:1rem;  
+  padding-right:8%;  
   @media screen and (max-width: 768px) {
-    border:1px solid red;
-    width:450px;
-    font-size:30pt;
-  }
+    padding-right:15%
+    font-size:27pt
+   }
 
-
+   @media screen and (max-width: 572px) {
+    // padding-right:%
+    font-size:23pt
+   }
 `;
 
 const ImgsParallaxAppTwo = styled(Parallax)`
@@ -190,12 +188,29 @@ const AppContainerTwo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 15rem;
   // padding:2rem;
 
 
 `;
+const ContainerTxt = styled.div`
+  position: relative;
 
+  margin-left: 5%;
+  margin-right:15%;
+  /* padding-left: 25%;
+  padding-right: 10%; */
+`;
+const ContainerTxtTT = styled.div`
+  position: relative;
+
+  margin-left: 5%;
+  margin-right:0%;
+width:100%;
+padding-right:5%
+@media screen and (max-width: 768px) {
+}
+`;
 const GlobalBrand = () => {
   const ag = useRef();
   const ag2 = useRef();
@@ -226,17 +241,16 @@ const GlobalBrand = () => {
 
     
 
-
       {/* Web */}
 
       <Hide>
         <div ref={ag}>
-          <Container className="pSection">
+          <Container className="pSection" >
             <ContainerTxt
               className="pContent"
-              style={{ marginLeft: "5%", marginRight: "30%" }}
+             
             >
-              <Parallax speed={15}>
+              <Parallax speed={20}>
                 <Desc>
                   We are a global brand and design agency and together we challenge
                   what is now to create what’s next.
@@ -254,7 +268,7 @@ const GlobalBrand = () => {
             </ImgsParallax>
           </Container>
           <Container className="pSection" style={{marginTop:"20rem"}}>
-            <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
+            <ContainerTxtTT className="pContent" >
               <Parallax speed={-20} >
                 <WebDes >
                   We work with clients
@@ -266,7 +280,7 @@ const GlobalBrand = () => {
                   <br /> everyone else is doing.
                 </WebDes>
               </Parallax>
-            </ContainerTxt>
+            </ContainerTxtTT>
             <ImgParallax speed={20}>
               <img
                 className="pImage"
@@ -289,7 +303,7 @@ const GlobalBrand = () => {
               style={{ border: '0px solid white' }}
             >
               <Parallax speed={10} >
-                <DescApp style={{ border: '0px solid red', width: widths - 68 }}>
+                <DescApp style={{ border: '0px solid red', width: widths *0.9}}>
                   We are a global brand and design agency and together we challenge
                   what is now to create what’s next.
                 </DescApp>
@@ -308,9 +322,9 @@ const GlobalBrand = () => {
           </AppContainer>
 
           <AppContainerTwo className="pSection" style={{ border: '0px solid red' }}>
-            <ContainerTxt className="pContent" style={{ border: '0px solid white', width: widths }}>
-              <Parallax speed={-10} >
-                <AppDescription>
+            {/* <ContainerTxt className="pContent" style={{ border: '1px solid white', width: widths - 68  }}> */}
+              <Parallax speed={-10} className="pContent">
+                <AppDescription style={{border:'0px solid red' }}>
                   We work with clients
                   <br /> worldwide and of all
                   <br /> shapes and sizes, so
@@ -320,20 +334,21 @@ const GlobalBrand = () => {
                   <br /> everyone else is doing.
                 </AppDescription>
               </Parallax>
-            </ContainerTxt>
+            {/* </ContainerTxt> */}
             <ImgsParallaxAppTwo speed={10} >
               <img
                 // className="pImage"
                 src="/static/global_2.png"
-                width={widths - 10}
+                width={widths - 40}
                 height="400px"
-                style={{ paddingRight: '10%', paddingLeft: '0%' }}
+                style={{ paddingRight: '0%', paddingLeft: '0%' }}
               />
             </ImgsParallaxAppTwo>
           </AppContainerTwo>
         </div>
 
       </Show>
+
 
 
 
