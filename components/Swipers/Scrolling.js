@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-const mySwiper = styled.div`
-margin-top: 12rem;
-height: 100vh !important;
-width: 100%;
-background-color: transparent !important;
-position: absolute !important;
+const Hide =styled.div`
+@media screen and (max-width: 680px) {
+  display:none;
+
+}
+`
+const Show =styled.div`
+@media screen and (min-width: 679px) {
+  display:none;
+  justify-content:flex-start;
+  align-item:left;
+}
 `
 const Scrolling = () => {
   const [shadow, setShadow] = useState(3);
@@ -78,342 +84,473 @@ const Scrolling = () => {
         <h1 className="text1">BRAND STRATEGY PROCESS</h1>
       </div>
       <div className="mySwiper" >
+      <Hide>
         <div className="slides">
-          <div className="flex-container">
-            <div>
-              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                <div style={{ flex: 1, border: '1px solid green'}}>
-                  <div className="title">
-                    Step<span style={{ paddingRight: "5px" }}></span>1
-                  </div>
-                </div>
-                <div style={{ flex: 2, border: '1px solid green',width:'400px' }}>
-                  <div>
-                    <div className="right-head">
-                      Immerse & <br /> Research_
-                    </div>
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step1</span></h2>
 
-                    <div className="right-list">Brand immersion</div>
-                    <div className="right-list">Brand audit</div>
+             
 
-                    <div className="right-list">Market research</div>
-
-                    <div className="right-list">Competitor analysis</div>
-                    <div className="right-list">Audience analysis</div>
-                  </div>
-                </div>
               </div>
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                  Immerse & <br /> Research_
+                </div>
+                <div className="right-list">Brand immersion</div>
+                <div className="right-list">Brand audit</div>
 
+                <div className="right-list">Market research</div>
+
+                <div className="right-list">Competitor analysis</div>
+                <div className="right-list">Audience analysis</div>
+                </div>
+
+              </div>
             </div>
-            {/* <div style={{ flex: 1,border:'1px solid black' }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "90%",
-                  paddingTop: "50%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>1
-                </div>
-              </div>
-            </div> */}
-            {/* <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">
-                Immerse & <br /> Research_
-              </div>
-
-              <div className="right-list">Brand immersion</div>
-              <div className="right-list">Brand audit</div>
-
-              <div className="right-list">Market research</div>
-
-              <div className="right-list">Competitor analysis</div>
-              <div className="right-list">Audience analysis</div>
-            </div> */}
+               
+              
+         
+          
+            
           </div>
         </div>
+        </Hide>
+        <Show>
         <div className="slides">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "100%",
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step1</div>
+             <div >  
+                           <div className="mobhead">
+             Immerse & <br /> Research_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Brand immersion</div>
+           <div className="mobtext">Brand audit</div>
 
-                  paddingTop: "80%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>2
-                </div>
-              </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Fieldwork_</div>
+           <div className="mobtext">Market research</div>
 
-              <div className="right-list">
-                Customer, employee <br /> or partner interviews
+           <div className="mobtext">Competitor analysis</div>
+           <div className="mobtext">Audience analysis</div>
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+
+       {/* ////////////////// */}
+       <Hide>
+       <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step2</span></h2>
+
+             
+
               </div>
-              <div className="right-list">Questionnaires</div>
-              <div className="right-list">Polls</div>
-              <div className="right-list">Pop-up agency</div>
-            </div>
-          </div>
-        </div>{" "}
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+            Fieldwork_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Customer, employee</div>
+           <div className="mobtext">or partner interviews</div>
+
+           <div className="mobtext">Questionnaires</div>
+
+           <div className="mobtext">Polls</div>
+           <div className="mobtext">Pop-up agency</div>
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Hide>
+       <Show>
         <div className="slides">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "80%",
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step2</div>
+             <div >  
+                           <div className="mobhead">
+            Fieldwork_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Customer, employee</div>
+           <div className="mobtext">or partner interviews</div>
 
-                  paddingTop: "100%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>3
-                </div>
+           <div className="mobtext">Questionnaires</div>
+
+           <div className="mobtext">Polls</div>
+           <div className="mobtext">Pop-up agency</div>
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+
+       
+       {/* /////////// */}
+       <Hide>
+       <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step3</span></h2>
+
+             
+
               </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Workshop_</div>
-              <div className="right-list">Collaborative workshop</div>
-              <div className="right-list">Q & A</div>
-              <div className="right-list">Group exercises</div>
-              <div className="right-list">
-                Identification of brand <br />
-                objectives and opportunities{" "}
-              </div>
-            </div>
-          </div>
-        </div>{" "}
-        <div className="slides" id="slide4">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "75%",
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                           Workshop_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Collaborative workshop</div>
+           <div className="mobtext">Q & A</div>
 
-                  paddingTop: "50%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>4
-                </div>
-              </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Brand Strategy_</div>
+           <div className="mobtext">Group exercises</div>
 
-              <div className="right-list">Audience personas</div>
-              <div className="right-list">
-                Brand positioning & Differentiation
-              </div>
+           <div className="mobtext">Identification of brand</div>
+           <div className="mobtext">objectives and opportunities</div>
+           </div>
 
-              <div className="right-list">Value proposition</div>
+         </div>
+       </div>
 
-              <div className="right-list">Brand purpose</div>
-              <div className="right-list">Tone of voice</div>
-              <div className="right-list">Values and vision</div>
-              <div className="right-list">Archetypes</div>
-              <div className="right-list">Messaging</div>
-              <div className="right-list">Brand compass</div>
-            </div>
-          </div>
-        </div>
-        <div className="slides" id="slide5">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "70%",
 
-                  paddingTop: "50%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>5
-                </div>
-              </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Brand Development_</div>
-              <div className="right-list">Naming</div>
-              <div className="right-list">Logo</div>
-
-              <div className="right-list">Icon</div>
-
-              <div className="right-list">Colour palette</div>
-              <div className="right-list">Typography</div>
-              <div className="right-list">Graphic language</div>
-              <div className="right-list">Imagery style</div>
-              <div className="right-list">Brand in action</div>
-              <div className="right-list">Guidelines</div>
-              <div className="right-list">Brand book </div>
-            </div>
-          </div>
-        </div>
+            </div></div>
+        </Hide>
+        <Show>
         <div className="slides">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "95%",
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step3</div>
+             <div >  
+                           <div className="mobhead">
+                           Workshop_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Collaborative workshop</div>
+           <div className="mobtext">Q & A</div>
 
-                  paddingTop: "50%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>6
-                </div>
+           <div className="mobtext">Group exercises</div>
+
+           <div className="mobtext">Identification of brand</div>
+           <div className="mobtext">objectives and opportunities</div>
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+
+
+
+
+        {/* /////////////////// */}
+
+        <Hide>
+        <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step4</span></h2>
+
+             
+
               </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Testing_</div>
-              <div className="right-list">
-                Customer, employee <br />
-                or partner interviews
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                           Brand Strategy_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Audience personas</div>
+           <div className="mobtext">    Brand positioning & Differentiation</div>
+
+           <div className="mobtext">Value proposition</div>
+
+           <div className="mobtext">Archetypes</div>
+           <div className="mobtext">Messaging</div>
+           <div className="mobtext">Brand compass</div>
+
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Hide>
+        <Show>
+        <div className="slides">
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step4</div>
+             <div >  
+                           <div className="mobhead">
+                           Brand Strategy_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}> Audience personas</div>
+           <div className="mobtext">    Brand positioning & Differentiation</div>
+
+           <div className="mobtext">Value proposition</div>
+
+           <div className="mobtext">Archetypes</div>
+           <div className="mobtext">Messaging</div>
+           <div className="mobtext">Brand compass</div>
+
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+
+        {/* /// */}
+        <Hide>
+        <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step5</span></h2>
+
+             
+
               </div>
-              <div className="right-list">Questionnaires</div>
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                           Brand Development_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Naming</div>
+           <div className="mobtext">    Logo</div>
 
-              <div className="right-list">Focus groups</div>
+           <div className="mobtext">Icon</div>
 
-              <div className="right-list">User testing</div>
-              <div className="right-list">Mystery shopping</div>
-              <div className="right-list">A/B testing</div>
-            </div>
-          </div>
-        </div>
-        <div className="slides" id="slide7">
-          <div className="flex-container">
-            <div style={{ flex: 1, border: "0px solid green" }}>
-              <div
-                className="title-div"
-                style={{
-                  display: "flex",
-                  border: "0px solid grey",
-                  height: "65%",
+           <div className="mobtext">Colour palette</div>
+           <div className="mobtext">Typography</div>
+           <div className="mobtext">Graphic language</div>
+           <div className="mobtext">Imagery style</div>
+           <div className="mobtext">Brand in action</div>
+           <div className="mobtext">Guidelines</div>
+           <div className="mobtext">Brand book</div>
+           </div>
 
-                  paddingTop: "50%",
-                  paddingLeft: "50%",
-                  justifyContent: "center",
-                  border: "0px solid red",
-                }}
-              >
-                <div className="title">
-                  Step<span style={{ paddingRight: "5px" }}></span>7
-                </div>
+         </div>
+       </div>
+
+
+            </div></div>
+        </Hide>
+        <Show>
+        <div className="slides">
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step5</div>
+             <div >  
+                           <div className="mobhead">
+                           Brand Development_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Naming</div>
+           <div className="mobtext">    Logo</div>
+
+           <div className="mobtext">Icon</div>
+
+           <div className="mobtext">Colour palette</div>
+           <div className="mobtext">Typography</div>
+           <div className="mobtext">Graphic language</div>
+           <div className="mobtext">Imagery style</div>
+           <div className="mobtext">Brand in action</div>
+           <div className="mobtext">Guidelines</div>
+           <div className="mobtext">Brand book</div>
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+
+        </Show>
+
+        {/* //// */}
+
+        <Hide>
+        <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step6</span></h2>
+
+             
+
               </div>
-            </div>
-            <div
-              style={{
-                flex: 8,
-                border: "0px solid green",
-                paddingLeft: "1rem",
-                paddingTop: "2rem",
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                           Testing_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Customer, employee</div>
+           <div className="mobtext">     or partner interviews</div>
 
-                textAlign: "left",
-              }}
-            >
-              <div className="right-head">Creative Production_</div>
-              <div className="right-list">Digital design</div>
-              <div className="right-list">Video</div>
+           <div className="mobtext">Questionnaires</div>
 
-              <div className="right-list">Photography</div>
+           <div className="mobtext">Focus groups</div>
+           <div className="mobtext">User testing</div>
+           <div className="mobtext">Mystery shopping</div>
+           <div className="mobtext">A/B testing</div>
+           
+           </div>
 
-              <div className="right-list">Animation</div>
-              <div className="right-list">Print</div>
-              <div className="right-list">Packaging</div>
-              <div className="right-list">Campaigns</div>
-              <div className="right-list">
-                Social media guidelines & beyond...
+         </div>
+       </div>
+
+
+            </div></div>
+        </Hide>
+        <Show>
+        <div className="slides">
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' ,justifyContent:'center',alignItems:'center'}} >
+         
+         <div >
+         <div className="mobstep">Step6</div>
+             <div >  
+                           <div className="mobhead">
+                           Testing_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Customer, employee</div>
+           <div className="mobtext">     or partner interviews</div>
+
+           <div className="mobtext">Questionnaires</div>
+
+           <div className="mobtext">Focus groups</div>
+           <div className="mobtext">User testing</div>
+           <div className="mobtext">Mystery shopping</div>
+           <div className="mobtext">A/B testing</div>
+           
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+        {/* //////// */}
+        <Hide>
+        <div className="slides">
+          <div className="flex-container" >
+           
+           
+           <div style={{  display: 'flex', flexDirection: 'row' }} className="mani">
+              
+              <div style={{ flex: 1,  }} className="box1">
+              <h2 className="tot"><span>Step7</span></h2>
+
+             
+
               </div>
-            </div>
-          </div>
-        </div>
+              <div style={{ flex: 2}}>
+                  <div style={{height:'100%',paddingLeft:'1rem'}}>  
+                                <div className="right-head">
+                           Creative Production_
+           </div>
+           <div className="mobtext" >Digital design</div>
+           <div className="mobtext">     Video</div>
+
+           <div className="mobtext">Photography</div>
+
+           <div className="mobtext">Animation</div>
+           <div className="mobtext">Print</div>
+           <div className="mobtext">Packaging</div>
+           <div className="mobtext">Campaigns</div>
+           <div className="mobtext"> Social media guidelines & beyond...</div>
+
+           
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Hide>
+        <Show>
+        <div className="slides">
+          <div className="flex-container" >
+          <div style={{  display: 'flex', flexDirection: 'column' }} >
+         
+         <div >
+         <div className="mobstep">Step7</div>
+             <div >  
+                           <div className="mobhead" >
+                           Creative Production_
+           </div>
+           <div className="mobtext" style={{marginTop:'2rem'}}>Digital design</div>
+           <div className="mobtext">     Video</div>
+
+           <div className="mobtext">Photography</div>
+
+           <div className="mobtext">Animation</div>
+           <div className="mobtext">Print</div>
+           <div className="mobtext">Packaging</div>
+           <div className="mobtext">Campaigns</div>
+           <div className="mobtext"> Social media guidelines & beyond...</div>
+
+           
+           </div>
+
+         </div>
+       </div>
+
+
+            </div></div>
+        </Show>
+
+
         <div
           className="slides"
           style={{
