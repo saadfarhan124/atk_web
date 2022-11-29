@@ -219,7 +219,7 @@ const BrandStrategy = () => {
     <div ref={ag}>
       <Container className="pSection">
         <ContainerTxt className="pContent">
-          <Parallax speed={-20}>
+          <Parallax speed={-22}>
             <Title >
               BRAND
               <br /> STRATEGY
