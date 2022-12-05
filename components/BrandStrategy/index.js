@@ -11,18 +11,17 @@ const Title = styled.p`
   color: white;
   text-align: left;
   padding-bottom: 5rem;
-  // margin-top:5rem;
   @media screen and (max-width: 400px) {
     padding-bottom: 3rem;
   }
   @media screen and (max-width: 1029px) {
     font-size: 67pt;
   }
-  @media screen and (max-width: 768px) {
-    font-size: 56pt;
+  @media screen and (max-width: 748px) {
+    font-size: 47pt;
   }
   @media screen and (max-width: 505px) {
-    font-size: 37pt;
+    font-size: 27pt;
   }
 `;
 const Description = styled.p`
@@ -59,11 +58,11 @@ const Container = styled.div`
 const ImgContainer = styled.div`
   position: absolute;
   top: 50px !important;
-  right: 6% !important;
+  right: 100px !important;
 `;
 const ContainerTxt = styled.div`
   position: relative;
-  margin-left: 5%;
+  margin-left: 3%;
   
 `;
 
@@ -183,6 +182,38 @@ const BrandStrategy = () => {
   return (
 <>
 
+    {/* Web */}
+    <Hide>
+    <div ref={ag}>
+      <Container className="pSection">
+        <ContainerTxt className="pContent">
+          <Parallax speed={20}>
+            <Title >
+              BRAND
+              <br /> STRATEGY
+              <br /> PROCESS
+            </Title>
+          </Parallax>
+        </ContainerTxt>
+        <ImgContainer>
+          <Parallax speed={-20}>
+            <Imgs
+              className="pImage"
+              src="/static/brand.png"
+              width="457px"
+              height="290px"
+              // style={{marginTop:'rem'}}
+            />
+
+            <Description>
+              Choose an agency where you can work better, smarter, and stronger
+              with a 7-step tailored journey that works for you.
+            </Description>
+          </Parallax>
+        </ImgContainer>
+      </Container>
+    </div>
+    </Hide>
 {/* app */}
 <Show>
     <div ref={ag2} >
@@ -214,37 +245,6 @@ const BrandStrategy = () => {
 
     </Show>
 
-    {/* Web */}
-    <Hide style={{paddingTop:'5rem'}}>
-    <div ref={ag}>
-      <Container className="pSection">
-        <ContainerTxt className="pContent">
-          <Parallax speed={-22}>
-            <Title >
-              BRAND
-              <br /> STRATEGY
-              <br /> PROCESS
-            </Title>
-          </Parallax>
-        </ContainerTxt>
-        <ImgContainer>
-          <Parallax speed={20}>
-            <Imgs
-              className="pImage"
-              src="/static/brand.png"
-              width="457px"
-              height="290px"
-            />
-
-            <Description style={{marginTop:'3.5rem'}}>
-              Choose an agency where you can work better, smarter, and stronger
-              with a 7-step tailored journey that works for you.
-            </Description>
-          </Parallax>
-        </ImgContainer>
-      </Container>
-    </div>
-    </Hide>
     </>
   );
 };

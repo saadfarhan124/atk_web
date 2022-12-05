@@ -18,7 +18,7 @@ export default function Home() {
       <Sliderr />
       <GlobalBrand />
       
-     <div style={{marginTop:'25rem'}}></div>
+     <div style={{marginTop:'30rem'}}></div>
       <BrandStrategy />
 
 
