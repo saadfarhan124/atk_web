@@ -19,13 +19,13 @@ export default function Home() {
       <GlobalBrand />
      <div style={{marginTop:'20rem'}}></div>
       <BrandStrategy />
-{/* 
+
 
       <Scrolling />
-      <Overview />
+      {/* <Overview /> */}
       <div style={{ height: "20vh" }}></div>
       <Agency />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

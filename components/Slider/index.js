@@ -7,6 +7,7 @@ const Parent = styled.div`
   background-color: black;
   position: relative;
   height: 80vh;
+  margin-bottom:0.5rem;
 `;
 const Marquee = keyframes`
 0% {
@@ -20,7 +21,7 @@ const Slide = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("static/createbg.jpeg");
+  background-image: url("static/createbg2.jpeg");
 
   background-size: cover;
   background-position-y: 1rem;

@@ -10,9 +10,9 @@ const Container = styled.div`
 `;
 const ImgNews = styled.img`
   object-fit: contain;
-  width: 35vw;
+  width: 25vw;
   @media screen and (max-width: 479px) {
-    width: 50vw;
+    width: 40vw;
   }
 `;
 const Header = () => {

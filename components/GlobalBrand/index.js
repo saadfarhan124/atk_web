@@ -18,7 +18,6 @@ const Desc = styled.p`
   font-size: 50pt;
   font-weight: 400;
   text-align: left;
-
   @media screen and (max-width: 1160px) {
     font-size: 45pt;
 
@@ -236,27 +235,27 @@ const GlobalBrand = () => {
               className="pContent"
               style={{ marginLeft: "5%", marginRight: "30%" }}
             >
-              <Parallax speed={15}>
-                <Desc>
+              <Parallax speed={13}>
+                <Desc style={{marginBottom:'5rem'}}>
                   We are a global brand and design agency and together we challenge
                   what is now to create what’s next.
                 </Desc>
               </Parallax>
             </ContainerTxt>
-            <ImgsParallax speed={-15} >
+            <ImgsParallax speed={-22} >
               <img
                 className="pImage"
                 src="/static/global_1.png"
                 width="305px"
                 height="380px"
-                style={{marginTop:100}}
+                style={{marginTop:140}}
               />
             </ImgsParallax>
           </Container>
           <Container className="pSection" style={{marginTop:"20rem"}}>
             <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
-              <Parallax speed={-20} >
-                <WebDes >
+              <Parallax speed={-25} >
+                <WebDes style={{border:'0px solid red'}}>
                   We work with clients
                   <br /> worldwide and of all
                   <br /> shapes and sizes, so
@@ -267,7 +266,7 @@ const GlobalBrand = () => {
                 </WebDes>
               </Parallax>
             </ContainerTxt>
-            <ImgParallax speed={20}>
+            <ImgParallax speed={18}>
               <img
                 className="pImage"
                 src="/static/global_2.png"
