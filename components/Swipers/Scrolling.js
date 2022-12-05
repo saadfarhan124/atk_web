@@ -15,7 +15,6 @@ const Show = styled.div`
 `
 const Scrolling = () => {
   const [shadow, setShadow] = useState(3);
-  const [flag, setFlag] = useState(false)
   useEffect(() => {
     document.addEventListener("scroll", checkScroll);
     return () => document.removeEventListener("scroll", checkScroll);
@@ -30,14 +29,20 @@ const Scrolling = () => {
     // why loging these two? you gonna see
     //Mobile View
     if (window.innerWidth <= 767) {
-      if (window.scrollY >= 2000 && window.scrollY <= 2735) {
+      console.log(window.scrollY)
+      if (window.scrollY >= 2000 && window.scrollY <= 2929
+        ) {
+          console.log('.lll')
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
-        setFlag(true)
+        
         setShadow(1);
-      } else if (window.scrollY >= 2736 && window.scrollY <= 5630) {
+      } else if (window.scrollY > 2929
+        && window.scrollY <= 6227) {
+        console.log("relaese")
+        console.log(window.scrollY)
         setShadow(2);
-      } else if (window.scrollY >= 5631) {
+      } else if (window.scrollY > 6227) {
         setShadow(3);
       }
     }
@@ -59,12 +64,12 @@ const Scrolling = () => {
       }
     } //Browser View
     else if (window.innerWidth >= 1024) {
-      if (window.scrollY >= 2300 && window.scrollY <= 3124) {
+      if (window.scrollY >= 2300 && window.scrollY <= 2902) {
         //      if (window.scrollY + 10 >= bar.offsetTop)
         // why +10 ?? will see
         setShadow(1);
 
-      } else if (window.scrollY >= 3125 && window.scrollY <= 7350) {
+      } else if (window.scrollY >= 2903 && window.scrollY <= 7350) {
         console.log("000")
         setShadow(2);
       } else if (window.scrollY >= 7351) {
@@ -92,10 +97,10 @@ const Scrolling = () => {
                 Step 1
               </div>
             </div>
-            <div className="flex-container" style={{ padding: '0', height: '80vh' }} >
+            <div className="flex-container" style={{ padding: '0' }} >
               <div style={{height: '100%', width: '100%', display: 'flex', justifyContent: 'center' }}>
 
-                <div style={{ width: '60%',  height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ border:'0px solid red',width: '100%',  height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div>
                     <div className="heading">
                       Immerse & <br /> Research_

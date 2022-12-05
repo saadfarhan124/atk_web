@@ -153,7 +153,7 @@ const AppDescription = styled.div`
 `;
 const WebDes = styled.div`
   font-family: "Graphik";
-  font-size: 30pt;
+  font-size: 40pt;
   letter-spacing: 0px;
     text-align: right;
   // margin-bottom:150%;
@@ -163,7 +163,7 @@ const WebDes = styled.div`
     // padding-right:15%
     font-size:27pt
    }
-
+// width:200px;
    @media screen and (max-width: 572px) {
     // padding-right:%
     font-size:23pt
@@ -259,15 +259,15 @@ const GlobalBrand = () => {
               <img
                 className="pImage"
                 src="/static/global_1.png"
-                width="305px"
-                height="380px"
+                width="365px"
+                height="450px"
                 style={{marginTop:140}}
               />
             </ImgsParallax>
           </Container>
-          <Container className="pSection" style={{marginTop:"20rem",border:'0px solid red'}}>
+          <Container className="pSection" style={{marginTop:"0rem",border:'0px solid red'}}>
             <ContainerTxt className="pContent" style={{ marginRight: '0%',border:'0px solid red',marginLeft:'45%' ,width:1000}}>
-              <Parallax speed={-25} >
+              <Parallax speed={-30} >
                 <WebDes style={{border:'0px solid red',marginTop:'20rem'}}>
                   We work with clients
                   <br /> worldwide and of all
@@ -283,8 +283,8 @@ const GlobalBrand = () => {
               <img
                 className="pImage"
                 src="/static/global_2.png"
-                width="305px"
-                height="380px"
+                width="365px"
+                height="450px"
               />
             </ImgParallax>
           </Container>

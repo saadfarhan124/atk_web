@@ -196,7 +196,7 @@ const BrandStrategy = () => {
           </Parallax>
         </ContainerTxt>
         <ImgContainer style={{border:'0px solid  red'}}>
-          <Parallax speed={-20}>
+          <Parallax speed={-30}>
             <Imgs
               className="pImage"
               src="/static/brand.png"
