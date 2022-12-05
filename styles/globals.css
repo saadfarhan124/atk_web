@@ -12,7 +12,6 @@ body {
   width: 100%;
   background-color: transparent !important;
   position: absolute !important;
-
 }
 
 .slides {
@@ -39,7 +38,8 @@ body {
   display: flex;
   flex-direction: row;
 
-  height: 65vh;
+  /* height: 65vh; */
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -90,7 +90,9 @@ body {
   transform-origin: 0 50%;
   transform: rotate(-90deg) translate(-50%, 50%);
   padding-top: 25vh;
-
+  /* border: 1px solid red; */
+  /* margin-right: 2rem; */
+/* padding-bottom: 20rem; */
   width: 15vw;
   display: block;
   margin-block-start: 80%;
@@ -104,6 +106,7 @@ body {
 .mani {
   height: 60%;
   width: 60%;
+align-items: center;
 }
 
 @media screen and (max-width: 1500px) {
@@ -493,7 +496,7 @@ html {
   justify-content: center;
   position: relative;
 
-  height: 640vh;
+  height: 700vh;
 
 
 
