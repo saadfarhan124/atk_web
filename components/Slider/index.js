@@ -7,7 +7,12 @@ const Parent = styled.div`
   background-color: black;
   position: relative;
   height: 80vh;
+<<<<<<< HEAD
   margin-bottom:0.5rem;
+=======
+  max-width: 100%;
+    overflow-x: hidden;
+>>>>>>> 8ed16ed22002a6d97fdb3702c540292911c261ee
 `;
 const Marquee = keyframes`
 0% {
@@ -16,6 +21,7 @@ const Marquee = keyframes`
 100% {
   background-position: -4250%;
 }
+
 `;
 const Slide = styled.div`
   background-size: cover;
@@ -25,6 +31,8 @@ const Slide = styled.div`
 
   background-size: cover;
   background-position-y: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
 `;
 const Type = styled.div`
   height: 80vh;
@@ -35,6 +43,8 @@ const Type = styled.div`
   animation: ${Marquee} 480s linear infinite;
   animation-direction: reverse;
   background-image: url("/static/create.png");
+  max-width: 100%;
+  overflow-x: hidden;
 `;
 const Mytext = styled.div`
   display: block;
@@ -53,10 +63,10 @@ const Mytext = styled.div`
   color: white;
   overflow-x: hidden;
   @media (max-width: 479px) {
-    font-size: 15vw;
+    font-size: 12vw;
  
-    margin-bottom:50%;
-    height:30vh
+    top:20%;
+    height:40vh
     
   }
 

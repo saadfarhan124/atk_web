@@ -11,17 +11,18 @@ const Title = styled.p`
   color: white;
   text-align: left;
   padding-bottom: 5rem;
+  // margin-top:5rem;
   @media screen and (max-width: 400px) {
     padding-bottom: 3rem;
   }
   @media screen and (max-width: 1029px) {
     font-size: 67pt;
   }
-  @media screen and (max-width: 748px) {
-    font-size: 47pt;
+  @media screen and (max-width: 768px) {
+    font-size: 56pt;
   }
   @media screen and (max-width: 505px) {
-    font-size: 27pt;
+    font-size: 37pt;
   }
 `;
 const Description = styled.p`
@@ -58,11 +59,11 @@ const Container = styled.div`
 const ImgContainer = styled.div`
   position: absolute;
   top: 50px !important;
-  right: 100px !important;
+  right: 6% !important;
 `;
 const ContainerTxt = styled.div`
   position: relative;
-  margin-left: 3%;
+  margin-left: 5%;
   
 `;
 
@@ -214,12 +215,12 @@ const BrandStrategy = () => {
     </Show>
 
     {/* Web */}
-    <Hide>
+    <Hide style={{paddingTop:'5rem'}}>
     <div ref={ag}>
       <Container className="pSection">
         <ContainerTxt className="pContent">
-          <Parallax speed={-10}>
-            <Title>
+          <Parallax speed={-22}>
+            <Title >
               BRAND
               <br /> STRATEGY
               <br /> PROCESS
@@ -227,7 +228,7 @@ const BrandStrategy = () => {
           </Parallax>
         </ContainerTxt>
         <ImgContainer>
-          <Parallax speed={10}>
+          <Parallax speed={20}>
             <Imgs
               className="pImage"
               src="/static/brand.png"
@@ -235,7 +236,7 @@ const BrandStrategy = () => {
               height="290px"
             />
 
-            <Description>
+            <Description style={{marginTop:'3.5rem'}}>
               Choose an agency where you can work better, smarter, and stronger
               with a 7-step tailored journey that works for you.
             </Description>

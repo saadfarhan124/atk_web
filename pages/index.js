@@ -9,7 +9,7 @@ import GlobalBrand from "../components/GlobalBrand";
 import BrandStrategy from "../components/BrandStrategy";
 import Brand from "../components/Brand";
 import Overview from "../components/Overview";
-import Scroll from "../components/Swipers/Scroll";
+// import Scroll from "../components/Swipers/Scroll";
 import Scrolling from "../components/Swipers/Scrolling";
 export default function Home() {
   return (
@@ -17,7 +17,8 @@ export default function Home() {
       <Header />
       <Sliderr />
       <GlobalBrand />
-     <div style={{marginTop:'20rem'}}></div>
+      
+     <div style={{marginTop:'25rem'}}></div>
       <BrandStrategy />
 
 
