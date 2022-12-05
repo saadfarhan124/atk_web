@@ -17,16 +17,17 @@ export default function Home() {
       <Header />
       <Sliderr />
       <GlobalBrand />
-      
-     <div style={{marginTop:'30rem'}}></div>
+      <div style={{marginTop:'30rem'}}></div>
       <BrandStrategy />
+   
 
 
       <Scrolling />
       {/* <Overview /> */}
       <div style={{ height: "20vh" }}></div>
-      <Agency />
-      <Footer />
+      {/* <Agency />
+      */}
+       <Footer />
     </div>
   );
 }

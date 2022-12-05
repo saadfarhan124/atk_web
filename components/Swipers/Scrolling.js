@@ -291,7 +291,7 @@ const Scrolling = () => {
                 </div>
                 <div style={{ flex: 2 }}>
                   <div style={{ height: '100%', paddingLeft: '1rem' }}>
-                    <div className="right-head" style={{border:'1px solid red',padding:'0',paddingBottom:2}}>
+                    <div className="right-head" style={{border:'0px solid red',padding:'0',paddingBottom:2}}>
                       Brand Strategy_
                     </div>
                     <div className="mobtext" style={{ marginTop: '0rem' }}> Audience personas</div>

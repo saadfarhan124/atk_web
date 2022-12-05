@@ -120,7 +120,7 @@ const DescApp = styled.p`
   padding:2rem;
   margin-left: 10%;
   margin-right:15%;
- 
+ width:350px
 `;
 const AppContainer = styled.div`
   position: relative;
@@ -145,22 +145,22 @@ const AppDescription = styled.div`
   @media screen and (max-width: 483px) {
     margin-top:100%;
     font-size: 20pt;
-    width:400px;
-    width:width -190
+    width:360px;
+    // width:width -190
   }
   
 
 `;
 const WebDes = styled.div`
   font-family: "Graphik";
-  font-size: 36pt;
+  font-size: 30pt;
   letter-spacing: 0px;
     text-align: right;
   // margin-bottom:150%;
   margin-top:15rem;
   padding-right:8%;  
   @media screen and (max-width: 768px) {
-    padding-right:15%
+    // padding-right:15%
     font-size:27pt
    }
 
@@ -268,7 +268,7 @@ const GlobalBrand = () => {
           <Container className="pSection" style={{marginTop:"20rem",border:'0px solid red'}}>
             <ContainerTxt className="pContent" style={{ marginRight: '0%',border:'0px solid red',marginLeft:'45%' ,width:1000}}>
               <Parallax speed={-25} >
-                <WebDes style={{border:'0px solid red'}}>
+                <WebDes style={{border:'0px solid red',marginTop:'20rem'}}>
                   We work with clients
                   <br /> worldwide and of all
                   shapes <br /> and sizes, so
@@ -301,7 +301,7 @@ const GlobalBrand = () => {
               style={{ border: '0px solid white' }}
             >
               <Parallax speed={10} >
-                <DescApp style={{ border: '0px solid red', width: widths *0.9}}>
+                <DescApp >
                   We are a global brand and design agency and together we challenge
                   what is now to create what’s next.
                 </DescApp>
@@ -337,8 +337,9 @@ const GlobalBrand = () => {
               <img
                 // className="pImage"
                 src="/static/global_2.png"
-                width={widths - 40}
+                width="350px"
                 height="400px"
+                // width="400px"
                 style={{ paddingRight: '0%', paddingLeft: '0%' }}
               />
             </ImgsParallaxAppTwo>

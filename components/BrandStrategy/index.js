@@ -58,7 +58,7 @@ const Container = styled.div`
 const ImgContainer = styled.div`
   position: absolute;
   top: 50px !important;
-  right: 100px !important;
+  right: 50px !important;
 `;
 const ContainerTxt = styled.div`
   position: relative;
@@ -195,7 +195,7 @@ const BrandStrategy = () => {
             </Title>
           </Parallax>
         </ContainerTxt>
-        <ImgContainer>
+        <ImgContainer style={{border:'0px solid  red'}}>
           <Parallax speed={-20}>
             <Imgs
               className="pImage"
