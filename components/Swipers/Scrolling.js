@@ -64,9 +64,10 @@ const Scrolling = () => {
         // why +10 ?? will see
         setShadow(1);
 
-      } else if (window.scrollY >= 3125 && window.scrollY <= 7300) {
+      } else if (window.scrollY >= 3125 && window.scrollY <= 7350) {
+        console.log("000")
         setShadow(2);
-      } else if (window.scrollY >= 7301) {
+      } else if (window.scrollY >= 7351) {
         setShadow(3);
       }
     }

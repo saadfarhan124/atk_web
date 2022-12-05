@@ -21,7 +21,6 @@ export default function Home() {
       <BrandStrategy />
    
 
-
       <Scrolling />
       {/* <Overview /> */}
       <div style={{ height: "20vh" }}></div>
