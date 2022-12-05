@@ -235,7 +235,7 @@ const BrandStrategy = () => {
           <img
             // className="pImage"
             src="/static/brand.png"
-            width={widths-20}
+            width="375px"
             height="500px"
             style={{paddingLedt:'0%'}}
           />

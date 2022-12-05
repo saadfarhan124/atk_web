@@ -36,14 +36,39 @@ body {
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   /* height: 65vh; */
   height: 100%;
   justify-content: center;
   align-items: center;
 }
+.steptitle{
+  font-family: "Graphik";
+  font-size: 25pt;
+  color:black;
+  text-align: left;
+  /* height: 20vh; */
+}
+.heading {
+  font-size: 35pt;
+  /* margin: -10px; */
+  font-weight: 500;
+  color: black;
+  padding-bottom: 1rem;
+  text-align: left;
+}
 
+@media only screen and (max-width:825px) {
+  .heading {
+    font-size: 27pt;
+  }
+}
+@media only screen and (max-width:637px) {
+  .slides {
+    width: 80% !important;
+  }
+}
 /* .title {
   height: '100%';
   color: black;
@@ -86,17 +111,17 @@ body {
 
 .tot {
   font-family: 'Graphik';
-  font-size: 50pt;
+  font-size: 20pt;
   transform-origin: 0 50%;
   transform: rotate(-90deg) translate(-50%, 50%);
-  padding-top: 25vh;
+  /* padding-top: 25vh; */
   /* border: 1px solid red; */
   /* margin-right: 2rem; */
 /* padding-bottom: 20rem; */
   width: 15vw;
   display: block;
-  margin-block-start: 80%;
-  margin-inline-start: -15vh;
+  /* margin-block-start: 80%; */
+  /* margin-inline-start: -15vh; */
   /* margin-block-end: -25vh; */
   font-weight: 100;
 
@@ -146,9 +171,9 @@ align-items: center;
     padding-right: 3rem;
   }
 
-  .slides {
+  /* .slides {
     min-height: 10vh !important
-  }
+  } */
 
   .flex-container {
     min-height: 10vh !important
@@ -185,11 +210,11 @@ align-items: center;
   }
 }
 @media screen and (max-width: 1026px) {
-  
+/*   
   .slides {
     height: 60vh !important;
 
-  }
+  } */
   .flex-container{
   
     height: 55vh !important;
@@ -208,10 +233,10 @@ align-items: center;
   }
 }
 @media screen and (max-width: 849px) {
-  .slides{
+  /* .slides{
     width: 70% !important;
     height: 55vh !important;
-  }
+  } */
   .tot{
     font-size: 31pt;
   }
@@ -495,8 +520,8 @@ html {
   display: flex;
   justify-content: center;
   position: relative;
-
-  height: 700vh;
+width: 100%;
+  height: 800vh;
 
 
 
@@ -610,12 +635,12 @@ html {
     display: none;
   }
 
-  .containerw {
+  /* .containerw {
 
     height: 630vh;
-
+border: 1px solid green;
     margin: 0px -2rem !important;
-  }
+  } */
 
 
   .text1 {
