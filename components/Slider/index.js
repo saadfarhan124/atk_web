@@ -7,12 +7,7 @@ const Parent = styled.div`
   background-color: black;
   position: relative;
   height: 80vh;
-<<<<<<< HEAD
   margin-bottom:0.5rem;
-=======
-  max-width: 100%;
-    overflow-x: hidden;
->>>>>>> 8ed16ed22002a6d97fdb3702c540292911c261ee
 `;
 const Marquee = keyframes`
 0% {

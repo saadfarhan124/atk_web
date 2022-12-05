@@ -155,7 +155,6 @@ const WebDes = styled.div`
   font-family: "Graphik";
   font-size: 36pt;
   letter-spacing: 0px;
-  
     text-align: right;
   // margin-bottom:150%;
   margin-top:15rem;
@@ -266,17 +265,17 @@ const GlobalBrand = () => {
               />
             </ImgsParallax>
           </Container>
-          <Container className="pSection" style={{marginTop:"20rem"}}>
-            <ContainerTxt className="pContent" style={{ marginRight: '0%' }}>
+          <Container className="pSection" style={{marginTop:"20rem",border:'0px solid red'}}>
+            <ContainerTxt className="pContent" style={{ marginRight: '0%',border:'0px solid red',marginLeft:'45%' ,width:1000}}>
               <Parallax speed={-25} >
                 <WebDes style={{border:'0px solid red'}}>
                   We work with clients
                   <br /> worldwide and of all
-                  <br /> shapes and sizes, so
+                  shapes <br /> and sizes, so
                   <br /> we’re never held back
                   <br /> by convention or
-                  <br /> worried about what
-                  <br /> everyone else is doing.
+                  <br /> worried about <br /> what
+                  everyone else is doing.
                 </WebDes>
               </Parallax>
             </ContainerTxt>
