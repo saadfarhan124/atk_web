@@ -64,9 +64,9 @@ const Scrolling = () => {
         // why +10 ?? will see
         setShadow(1);
 
-      } else if (window.scrollY >= 3125 && window.scrollY <= 7200) {
+      } else if (window.scrollY >= 3125 && window.scrollY <= 7300) {
         setShadow(2);
-      } else if (window.scrollY >= 7201) {
+      } else if (window.scrollY >= 7301) {
         setShadow(3);
       }
     }
@@ -85,7 +85,7 @@ const Scrolling = () => {
           <h1 className="text1">BRAND STRATEGY PROCESS</h1>
         </div>
         <div className="mySwiper" >
-          <div className="slides" style={{border:'1px solid red'}}>
+          <div className="slides" style={{border:'0px solid red'}}>
             <div style={{width: '100%' }}>
               <div className="steptitle">
                 Step 1
@@ -231,7 +231,7 @@ const Scrolling = () => {
                 <div style={{ width: '60%',  height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div>
                     <div className="heading">
-                      Brand Development_
+                      Brand Making_
 
                     </div>
                     <div className="right-list">Naming</div>
@@ -265,7 +265,7 @@ const Scrolling = () => {
                 <div style={{ width: '60%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <div>
                     <div className="heading">
-                      Testing_
+                      Brand Testing_
 
                     </div>
                     <div className="right-list">Customer, employee</div>
